@@ -1,1 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Operational Clarity Intensive&trade; | Frenetta Tate Global</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --charcoal:#1F1F1F;
+  --ivory:#F5F2ED;
+  --gold:#C2A46D;
+  --taupe:#D9D4CC;
+  --olive:#4A5A4D;
+  --c80:rgba(31,31,31,.80);
+  --c60:rgba(31,31,31,.60);
+  --iv90:rgba(245,242,237,.90);
+  --iv70:rgba(245,242,237,.70);
+  --taupe-dk:#C4BDB3;
+  --gold-lt:#D4BC8A;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:auto;overflow-x:hidden;width:100%}
+body{font-family:'Jost',sans-serif;background:var(--ivory);color:var(--charcoal);overflow-x:hidden;width:100%;font-size:19px;line-height:1.75;-webkit-font-smoothing:antialiased}
+ 
 
+/* SHARED */
+.lbl{display:inline-block;font-size:.72rem;font-weight:700;letter-spacing:.32em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem}
+.gold-line{width:60px;height:2px;background:var(--gold);margin:1.5rem 0}
+.serif{font-family:'Cormorant Garamond',serif}
+.btn-p{background:var(--gold);color:var(--charcoal);padding:1.1rem 2.5rem;font-size:.82rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;border:none;cursor:pointer;text-decoration:none;display:inline-block;transition:background .3s,transform .2s;font-family:'Jost',sans-serif}
+.btn-p:hover{background:var(--charcoal);color:var(--ivory);transform:translateY(-2px)}
+.btn-s{background:transparent;color:var(--charcoal);padding:1.1rem 2.5rem;font-size:.82rem;font-weight:500;letter-spacing:.16em;text-transform:uppercase;border:1px solid var(--taupe-dk);cursor:pointer;text-decoration:none;display:inline-block;transition:border-color .3s,color .3s;font-family:'Jost',sans-serif}
+.btn-s:hover{border-color:var(--gold);color:var(--gold)}
+.btn-iv{background:transparent;color:var(--ivory);padding:1.1rem 2.5rem;font-size:.82rem;font-weight:500;letter-spacing:.16em;text-transform:uppercase;border:1px solid rgba(245,242,237,.4);cursor:pointer;text-decoration:none;display:inline-block;transition:border-color .3s,color .3s;font-family:'Jost',sans-serif}
+.btn-iv:hover{border-color:var(--gold);color:var(--gold)}
+.anchor{font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-style:italic;color:var(--gold);line-height:1.6;margin-top:1.5rem;display:block}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:1000;display:flex;align-items:center;justify-content:space-between;padding:.85rem 3rem;background:rgba(245,242,237,.98);backdrop-filter:blur(14px);border-bottom:1px solid var(--taupe);white-space:nowrap}
+.nav-logo{display:flex;align-items:center;text-decoration:none;cursor:pointer}
+.nav-logo img{height:44px;width:auto}
+.nav-links{display:flex;gap:1.75rem;list-style:none;margin-left:1.5rem}
+.nav-links a{color:var(--c80);text-decoration:none;font-size:.8rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;transition:color .3s;cursor:pointer}
+.nav-links a:hover{color:var(--gold)}
+.nav-cta{border:1px solid var(--gold)!important;color:var(--gold)!important;padding:.5rem 1.3rem!important;transition:background .3s,color .3s!important}
+.nav-cta:hover{background:var(--gold)!important;color:var(--ivory)!important}
+.nav-copy{font-size:.68rem;color:rgba(245,242,237,.45);letter-spacing:.08em;text-align:center;padding:.38rem 5rem;background:var(--charcoal);border-bottom:1px solid rgba(194,164,109,.12)}
+
+/* FULL BLEED IMAGE HERO */
+.full-hero{position:relative;height:60vh;min-height:480px;overflow:hidden}
+.full-hero img{width:100%;height:100%;object-fit:cover;object-position:75% 20%;display:block}
+.full-hero-overlay{position:absolute;inset:0;background:linear-gradient(to right,rgba(31,31,31,.65) 0%,rgba(31,31,31,.65) 48%,rgba(31,31,31,.25) 65%,rgba(31,31,31,.05) 100%)}
+.full-hero-content{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;padding:4rem 4rem 2rem;max-width:55%}
+.full-hero::after{content:'';position:absolute;bottom:0;left:0;right:0;height:4px;background:var(--gold)}
+
+/* SPLIT HERO */
+.split-hero{display:grid;height:100vh}
+.split-hero.img-right{grid-template-columns:1fr 45%}
+.split-hero.img-left{grid-template-columns:45% 1fr}
+.split-hero-text{display:flex;flex-direction:column;justify-content:center;padding:8rem 5rem 5rem;background:var(--charcoal);position:relative}
+.split-hero-text::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:var(--gold)}
+.split-hero-img{position:relative;overflow:hidden}
+.split-hero-img img{width:100%;height:100%;object-fit:cover;object-position:75% 20%;display:block}
+.split-hero-img.fade-left::after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,var(--charcoal) 0%,transparent 25%)}
+.split-hero-img.fade-right::after{content:'';position:absolute;inset:0;background:linear-gradient(270deg,var(--charcoal) 0%,transparent 25%)}
+
+/* SECTION */
+.section{padding:3.5rem 4rem}
+.section.dark{background:var(--charcoal)}
+.section.ivory{background:var(--ivory)}
+.section.taupe{background:var(--taupe)}
+.section.olive{background:var(--olive)}
+.section-inner{max-width:1200px;margin:0 auto}
+.section-inner.narrow{max-width:820px}
+
+/* TYPOGRAPHY */
+.h-hero{font-family:'Cormorant Garamond',serif;font-size:clamp(2.8rem,5vw,5rem);font-weight:600;line-height:1.05;color:var(--ivory)}
+.h-hero em{font-style:italic;color:var(--gold)}
+.h-page{font-family:'Cormorant Garamond',serif;font-size:clamp(2.8rem,5vw,5rem);font-weight:600;line-height:1.06;color:var(--ivory)}
+.h-page em{font-style:italic;color:var(--gold)}
+.h-page.dark-text{color:var(--charcoal)}
+.h-page.dark-text em{color:var(--gold)}
+.h-section{font-family:'Cormorant Garamond',serif;font-size:clamp(2.2rem,3.5vw,3.2rem);font-weight:600;line-height:1.12;color:var(--charcoal)}
+.h-section.light{color:var(--ivory)}
+.h-sub{font-family:'Cormorant Garamond',serif;font-size:clamp(1.5rem,2.5vw,2rem);font-style:italic;color:var(--charcoal);line-height:1.45}
+.h-sub.light{color:var(--ivory)}
+.body-lg{font-size:1.2rem;line-height:1.85;color:var(--c80)}
+.body-lg.light{color:var(--iv90)}
+.body{font-size:1.1rem;line-height:1.8;color:var(--c80)}
+.body.light{color:var(--iv70)}
+.stmt{font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-style:italic;color:var(--charcoal);line-height:1.6}
+.stmt.light{color:var(--iv90)}
+.gold-italic{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.3rem;color:var(--gold);line-height:1.6}
+
+/* GRID LAYOUTS */
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center}
+.two-col.wide-right{grid-template-columns:1fr 1.4fr}
+.two-col.wide-left{grid-template-columns:1.4fr 1fr}
+.three-col{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem}
+.four-col{display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem}
+
+/* CARDS */
+.card{background:var(--ivory);border:1px solid var(--taupe);padding:1.75rem;transition:border-color .3s,box-shadow .3s;position:relative}
+.card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--gold);transform:scaleX(0);transform-origin:left;transition:transform .4s}
+.card:hover::before{transform:scaleX(1)}
+.card:hover{border-color:var(--taupe-dk);box-shadow:0 8px 40px rgba(31,31,31,.1)}
+.card.dark{background:rgba(245,242,237,.04);border-color:rgba(245,242,237,.1)}
+.card.dark:hover{border-color:rgba(194,164,109,.4)}
+.card h3{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:600;color:var(--charcoal);margin-bottom:.75rem;line-height:1.25}
+.card.dark h3{color:var(--ivory)}
+.card p{font-size:1.05rem;line-height:1.75;color:var(--c80)}
+.card.dark p{color:var(--iv70)}
+.card-num{font-family:'Cormorant Garamond',serif;font-size:4rem;font-weight:300;color:var(--taupe);line-height:1;margin-bottom:1rem}
+
+/* FW CARD */
+.fw-card{background:var(--ivory);border:1px solid var(--taupe);padding:2.5rem;position:relative;transition:all .3s}
+.fw-card::before{content:'';position:absolute;top:0;left:0;width:3px;height:100%;background:var(--gold)}
+.fw-card:hover{box-shadow:0 8px 40px rgba(31,31,31,.1);transform:translateY(-3px)}
+.fw-name{font-family:'Cormorant Garamond',serif;font-size:1.65rem;font-weight:600;color:var(--charcoal);margin-bottom:.75rem;line-height:1.2}
+.fw-desc{font-size:1.05rem;line-height:1.75;color:var(--c80)}
+.fw-list{list-style:none;margin-top:1rem;display:flex;flex-direction:column;gap:.5rem}
+.fw-list li{display:flex;align-items:flex-start;gap:.75rem;font-size:1rem;color:var(--c80)}
+.fw-list li::before{content:'';width:5px;height:5px;border-radius:50%;background:var(--gold);flex-shrink:0;margin-top:.6rem}
+
+/* DIVIDER */
+.divider{height:1px;background:var(--taupe);margin:2.5rem 0}
+.divider.gold{background:var(--gold);opacity:.35}
+
+/* ACCENT IMAGE */
+.accent-img{width:100%;display:block;object-fit:cover}
+.accent-img.framed{position:relative}
+.accent-img-wrap{position:relative}
+.accent-img-wrap::before{content:'';position:absolute;top:-14px;right:-14px;left:14px;bottom:14px;border:1px solid var(--gold);z-index:0}
+.accent-img-wrap img{position:relative;z-index:1;width:100%;display:block;object-fit:cover}
+
+
+.auth-item p{font-size:1rem;line-height:1.6;color:rgba(245,242,237,.88)}
+
+/* CONTACT FORM */
+.form-wrap{background:var(--ivory);border:1px solid var(--taupe-dk);padding:3rem}
+.form-title{font-size:.72rem;font-weight:700;letter-spacing:.26em;text-transform:uppercase;color:var(--gold);margin-bottom:2rem;padding-bottom:1rem;border-bottom:1px solid var(--taupe)}
+.form-group{margin-bottom:1.5rem}
+.form-group label{display:block;font-size:.72rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--c60);margin-bottom:.5rem}
+.form-group input,.form-group select,.form-group textarea{width:100%;background:var(--ivory);border:1px solid var(--taupe);color:var(--charcoal);padding:.9rem 1rem;font-family:'Jost',sans-serif;font-size:1rem;outline:none;transition:border-color .3s;appearance:none}
+.form-group select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath d='M0 0l5 6 5-6z' fill='%23C2A46D'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 1rem center;background-color:var(--ivory)}
+.form-group select option{background:var(--ivory);color:var(--charcoal)}
+.form-group input:focus,.form-group select:focus,.form-group textarea:focus{border-color:var(--gold)}
+.form-group textarea{resize:vertical;min-height:120px}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.form-submit{width:100%;background:var(--charcoal);color:var(--ivory);border:none;padding:1.15rem;font-family:'Jost',sans-serif;font-size:.82rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;cursor:pointer;transition:background .3s;margin-top:.5rem}
+.form-submit:hover{background:var(--gold);color:var(--charcoal)}
+.form-note{font-size:.88rem;color:var(--c60);text-align:center;margin-top:1.25rem;line-height:1.65}
+
+/* ENG ITEMS */
+.eng-item{display:flex;gap:1.2rem;padding:1.5rem;background:var(--ivory);border:1px solid var(--taupe-dk);transition:border-color .3s;margin-bottom:1rem}
+.eng-item:hover{border-color:var(--gold)}
+.eng-dot{width:5px;height:5px;border-radius:50%;background:var(--gold);flex-shrink:0;margin-top:.55rem}
+.eng-item h4{font-size:.78rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:.3rem}
+.eng-item p{font-size:1rem;line-height:1.6;color:var(--c80)}
+
+/* FOOTER */
+footer{background:rgba(245,242,237,.98);border-top:1px solid var(--taupe);padding:.85rem 3rem;display:flex;flex-direction:column;align-items:center;justify-content:center}
+.footer-links{display:flex;gap:2.5rem;list-style:none;align-items:center}
+.footer-links a{color:rgba(245,242,237,.45);text-decoration:none;font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;transition:color .3s;cursor:pointer}
+.footer-links a:hover{color:var(--gold)}
+.footer-copy{font-size:.75rem;color:rgba(245,242,237,.25);letter-spacing:.05em}
+
+/* ANIMATIONS */
+@keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
+.full-hero-content>*{animation:fadeUp .8s ease both}
+.full-hero-content>*:nth-child(1){animation-delay:.1s}
+.full-hero-content>*:nth-child(2){animation-delay:.28s}
+.full-hero-content>*:nth-child(3){animation-delay:.46s}
+.full-hero-content>*:nth-child(4){animation-delay:.64s}
+
+/* RESPONSIVE */
+@media(max-width:1024px){
+  nav,footer{padding-left:2rem;padding-right:2rem}
+  .section{padding:3.5rem 2rem}
+  .full-hero-content{padding:0 2rem}
+  .split-hero-text{padding:6rem 2rem 3rem}
+  .two-col,.two-col.wide-right,.two-col.wide-left,.three-col,.four-col{grid-template-columns:1fr}
+  .split-hero{grid-template-columns:1fr;height:auto}
+  .split-hero-img{height:55vw}
+  
+  .form-row{grid-template-columns:1fr}
+  footer{flex-direction:column;gap:1.5rem;text-align:center}
+}
+@media(max-width:600px){
+  .nav-links{display:none}
+  .nav-ham{display:block}
+}
+@media(min-width:601px){
+  .nav-links{display:flex!important}
+  .nav-ham{display:none}
+}
+
+nav label { cursor:pointer }
+.nav-lbl { color:var(--c80);font-size:.72rem;font-weight:500;letter-spacing:.07em;text-transform:uppercase;transition:color .3s }
+.nav-lbl:hover { color:var(--gold) }
+.nav-cta-lbl { border:1px solid var(--gold)!important;color:var(--gold)!important;padding:.5rem 1.3rem;display:inline-block }
+.nav-cta-lbl:hover { background:var(--gold);color:var(--ivory)!important }
+.footer-lbl { cursor:pointer;color:var(--c80);font-size:.72rem;font-weight:500;letter-spacing:.07em;text-transform:uppercase;transition:color .3s }
+.footer-lbl:hover { color:var(--gold) }
+
+/* Ensure fixed nav doesn't cover page tops */
+.page-about > *:first-child,
+.page-work > *:first-child,
+.page-contact > *:first-child,
+.page-oci > *:first-child { scroll-margin-top: 65px }
+</style>
+<style>
+/* Standalone OCI overrides */
+body { margin:0; padding:0; background:var(--ivory); }
+.oci-nav {
+  position:fixed;top:0;left:0;right:0;z-index:1000;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:.85rem 3rem;
+  background:rgba(245,242,237,.98);
+  backdrop-filter:blur(14px);
+  border-bottom:1px solid var(--taupe);
+}
+.oci-nav-links {
+  display:flex;align-items:center;gap:2rem;list-style:none;margin:0;padding:0;
+}
+.oci-nav-lbl {
+  color:var(--c80);font-size:.72rem;font-weight:500;
+  letter-spacing:.07em;text-transform:uppercase;
+  text-decoration:none;cursor:pointer;transition:color .3s;
+}
+.oci-nav-lbl:hover { color:var(--gold); }
+.oci-nav-cta {
+  border:1px solid var(--charcoal);padding:.4rem 1.25rem;
+  color:var(--charcoal);font-size:.72rem;font-weight:600;
+  letter-spacing:.1em;text-transform:uppercase;text-decoration:none;
+  transition:all .3s;
+}
+.oci-nav-cta:hover { background:var(--charcoal);color:var(--ivory); }
+.page-content { padding-top:65px; }
+
+/* Footer */
+.oci-footer {
+  background:rgba(245,242,237,.98);
+  border-top:1px solid var(--taupe);
+  padding:.85rem 3rem;
+}
+.oci-footer-inner {
+  display:flex;align-items:center;justify-content:space-between;
+  max-width:1200px;margin:0 auto;
+}
+.oci-copyright {
+  max-width:1200px;margin:.75rem auto 0;
+  border-top:1px solid var(--taupe);padding-top:.75rem;
+  text-align:center;font-size:.72rem;color:var(--c80);letter-spacing:.05em;
+}
+@media(max-width:700px){
+  .oci-nav { padding:.85rem 1.5rem; }
+  .oci-nav-links { display:none; }
+  .oci-footer { padding:.85rem 1.5rem; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="oci-nav">
+  <a href="/" style="text-decoration:none">
+    <img src="data:image/png;base64,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" alt="Frenetta Tate Global" style="height:56px;width:auto">
+  </a>
+  <ul class="oci-nav-links">
+    <li><a href="/" class="oci-nav-lbl">Home</a></li>
+    <li><a href="/#about" class="oci-nav-lbl">About</a></li>
+    <li><a href="/#work" class="oci-nav-lbl">The Work</a></li>
+    <li><a href="https://frenettatate.wixstudio.com/freegift" target="_blank" class="oci-nav-lbl">Leadership Audit</a></li>
+    <li><a href="https://frenettatate-droid.github.io/LIP/" target="_blank" class="oci-nav-lbl">Blog</a></li>
+    <li><a href="/#contact" class="oci-nav-cta">Work With Frenetta</a></li>
+  </ul>
+</nav>
+
+<!-- OCI CONTENT -->
+<div class="page-content">
+
+  <!-- HERO -->
+  <div style="background:var(--charcoal);padding:8rem 5rem 4rem;position:relative;border-bottom:3px solid var(--gold);text-align:center">
+    <div style="max-width:860px;margin:0 auto">
+      <span class="lbl">90-Minute Executive Diagnostic &middot; Alignara Group</span>
+      <h1 class="h-page" style="color:var(--ivory);margin-bottom:1.25rem">Operational Clarity <em style="font-style:italic;color:var(--gold)">Intensive&trade;</em></h1>
+      
+    </div>
+  </div>
+
+  <!-- PRICE BAR -->
+  <div style="background:var(--gold);padding:1rem 4rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem">
+    <div style="font-family:'Jost',sans-serif;font-size:2.4rem;font-weight:700;color:var(--charcoal);line-height:1">$2,500</div>
+    <div style="font-size:.8rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:rgba(31,31,31,.65)">Single Session &middot; No Retainer Required</div>
+  </div>
+
+  <!-- WHAT THIS SOLVES -->
+  <div class="section ivory">
+    <div class="section-inner">
+      <div class="two-col wide-right" style="align-items:start">
+        <div>
+          <span class="lbl">What This Solves</span>
+          <h2 class="h-section" style="margin-bottom:1.25rem">Misalignment doesn't<br>present as failure.<br><em style="font-style:italic;color:var(--gold)">It presents as friction.</em></h2>
+          <p class="body-lg" style="margin-bottom:1rem">Initiatives stall without clear cause. Decisions recycle across meetings. Teams move, but outcomes do not accelerate.</p>
+          <p class="body-lg" style="margin-bottom:1.5rem">Left unaddressed, this creates compounding execution drag, leadership fatigue, slowed decision velocity, and erosion of trust across leadership and teams.</p>
+          <p class="stmt">You do not need more input.<br>You need a precise diagnosis<br>and a decisive structural move.</p>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:1rem">
+          <div style="margin-bottom:2rem">
+        <span class="lbl">Read the Room</span>
+        <h2 class="h-section" style="margin-bottom:.5rem">Signals you need this session</h2>
+      </div>
+      <div class="card">
+          <h3>Compounding execution drag</h3><p>Initiatives stalling across functions without a clear cause anyone can name.</p></div>
+          <div class="card"><h3>Leadership fatigue</h3><p>Repeated intervention where the system should hold on its own.</p></div>
+          <div class="card"><h3>Decision velocity loss</h3><p>Decisions that feel heavier than the situation warrants.</p></div>
+          <div class="card"><h3>Strategy-to-execution gap</h3><p>A visible distance between leadership intent and organizational output.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SESSION STRUCTURE -->
+  <div class="section dark">
+    <div class="section-inner">
+      <span class="lbl">Session Structure</span>
+      <h2 class="h-section light" style="margin-bottom:3rem">90 minutes. Four phases.<br><em style="font-style:italic;color:var(--gold)">One decisive outcome.</em></h2>
+      <div style="display:grid;grid-template-columns:120px 1fr;gap:0">
+        <div style="font-family:'Jost',sans-serif;font-size:.9rem;font-weight:700;color:var(--gold);padding:1.75rem 0;border-bottom:1px solid rgba(245,242,237,.08);letter-spacing:.05em">0–20 min</div>
+        <div style="padding:1.25rem 0 1.25rem 2rem;border-bottom:1px solid rgba(245,242,237,.08)">
+          <p style="font-weight:500;font-size:1.1rem;color:var(--ivory);margin-bottom:.5rem">Executive Context</p>
+          <p style="font-size:1rem;color:rgba(245,242,237,.55);line-height:1.75">You present the situation as it exists today — where execution is slowing, where decisions are looping, where pressure is increasing. No preparation required. Only accuracy.</p>
+        </div>
+        <div style="font-family:'Jost',sans-serif;font-size:.9rem;font-weight:700;color:var(--gold);padding:1.75rem 0;border-bottom:1px solid rgba(245,242,237,.08);letter-spacing:.05em">20–55 min</div>
+        <div style="padding:1.25rem 0 1.25rem 2rem;border-bottom:1px solid rgba(245,242,237,.08)">
+          <p style="font-weight:500;font-size:1.1rem;color:var(--ivory);margin-bottom:.5rem">Structural Diagnosis</p>
+          <p style="font-size:1rem;color:rgba(245,242,237,.55);line-height:1.75">Using the Alignment Operating System&trade;, we isolate the breakdown — not the visible symptom, but the structural fault driving it. Decision pathways. Communication flow. Ownership and accountability. Execution design.</p>
+        </div>
+        <div style="font-family:'Jost',sans-serif;font-size:.9rem;font-weight:700;color:var(--gold);padding:1.75rem 0;border-bottom:1px solid rgba(245,242,237,.08);letter-spacing:.05em">55–80 min</div>
+        <div style="padding:1.25rem 0 1.25rem 2rem;border-bottom:1px solid rgba(245,242,237,.08)">
+          <p style="font-weight:500;font-size:1.1rem;color:var(--ivory);margin-bottom:.5rem">Decision Architecture</p>
+          <p style="font-size:1rem;color:rgba(245,242,237,.55);line-height:1.75">We define the single structural decision that creates the greatest immediate shift. Not a list. Not a strategy deck. One decision that changes how the system operates — within seven days.</p>
+        </div>
+        <div style="font-family:'Jost',sans-serif;font-size:.9rem;font-weight:700;color:var(--gold);padding:1.25rem 0;letter-spacing:.05em">80–90 min</div>
+        <div style="padding:1.25rem 0 1.25rem 2rem">
+          <p style="font-weight:500;font-size:1.1rem;color:var(--ivory);margin-bottom:.5rem">Integration &amp; Executive Direction</p>
+          <p style="font-size:1rem;color:rgba(245,242,237,.55);line-height:1.75">You leave with clarity on what is actually breaking, what changes immediately, and whether deeper structural work is required — and what that would entail.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- DELIVERABLES -->
+  <div class="section taupe">
+    <div class="section-inner">
+      <span class="lbl">What You Leave With</span>
+      <h2 class="h-section" style="margin-bottom:3rem">Five concrete <em style="font-style:italic;color:var(--gold)">deliverables.</em></h2>
+      <div class="three-col" style="grid-template-columns:repeat(2,1fr)">
+        <div class="card"><div class="card-num">01</div><h3>Executive Diagnostic Brief</h3><p>Delivered within 24 hours. Clear, concise, and usable at the executive level.</p></div>
+        <div class="card"><div class="card-num">02</div><h3>Root Cause Identification</h3><p>A precise articulation of the structural breakdown — named in a way that drives action, not debate.</p></div>
+        <div class="card"><div class="card-num">03</div><h3>A Single Strategic Decision</h3><p>One defined move that shifts execution immediately. Not a recommendation list.</p></div>
+        <div class="card"><div class="card-num">04</div><h3>Applied Framework Insight</h3><p>Targeted use of the Alignment Operating System&trade;, CARE Framework&trade;, or Experience Alignment lens.</p></div>
+        <div class="card" style="grid-column:1/-1"><div class="card-num">05</div><h3>Restored Command</h3><p>Clarity that allows you to lead the situation — rather than react to it.</p></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- THIS IS FOR -->
+  <div class="section ivory">
+    <div class="section-inner">
+      <div class="two-col" style="align-items:start">
+        <div>
+          <span class="lbl">This Is For</span>
+          <h2 class="h-section" style="margin-bottom:1.25rem">Senior leaders<br>operating <em style="font-style:italic;color:var(--gold)">at scale.</em></h2>
+          <p class="body-lg" style="margin-bottom:1.5rem">Vice Presidents, Senior Directors, and Chiefs of Staff. Heads of Operations, Experience, or Transformation. Leaders responsible for cross-functional performance.</p>
+          <div style="display:flex;flex-direction:column;gap:.75rem">
+            <div style="display:flex;gap:.9rem;align-items:flex-start"><span style="width:5px;height:5px;border-radius:50%;background:var(--gold);flex-shrink:0;margin-top:.65rem;display:block"></span><p class="body">Execution that requires excessive oversight to maintain</p></div>
+            <div style="display:flex;gap:.9rem;align-items:flex-start"><span style="width:5px;height:5px;border-radius:50%;background:var(--gold);flex-shrink:0;margin-top:.65rem;display:block"></span><p class="body">Teams delivering activity without consistent outcomes</p></div>
+            <div style="display:flex;gap:.9rem;align-items:flex-start"><span style="width:5px;height:5px;border-radius:50%;background:var(--gold);flex-shrink:0;margin-top:.65rem;display:block"></span><p class="body">Decisions that feel heavier than the situation warrants</p></div>
+            <div style="display:flex;gap:.9rem;align-items:flex-start"><span style="width:5px;height:5px;border-radius:50%;background:var(--gold);flex-shrink:0;margin-top:.65rem;display:block"></span><p class="body">A gap between leadership intent and organizational output</p></div>
+          </div>
+        </div>
+        <div>
+          <span class="lbl">This Is Not For</span>
+          <h2 class="h-section" style="margin-bottom:1.25rem">Not every inquiry<br><em style="font-style:italic;color:var(--gold)">moves forward.</em></h2>
+          <div style="background:var(--charcoal);padding:2.5rem;border-left:3px solid var(--gold)">
+            <div style="display:flex;flex-direction:column;gap:1rem">
+              <div style="display:flex;gap:.9rem;align-items:flex-start"><span style="color:var(--gold);font-weight:700;flex-shrink:0">&times;</span><p style="color:rgba(245,242,237,.65);font-size:1rem;line-height:1.7">Leaders seeking validation rather than diagnosis</p></div>
+              <div style="display:flex;gap:.9rem;align-items:flex-start"><span style="color:var(--gold);font-weight:700;flex-shrink:0">&times;</span><p style="color:rgba(245,242,237,.65);font-size:1rem;line-height:1.7">General coaching or leadership development</p></div>
+              <div style="display:flex;gap:.9rem;align-items:flex-start"><span style="color:var(--gold);font-weight:700;flex-shrink:0">&times;</span><p style="color:rgba(245,242,237,.65);font-size:1rem;line-height:1.7">Individuals without authority to act on structural decisions</p></div>
+              <div style="display:flex;gap:.9rem;align-items:flex-start"><span style="color:var(--gold);font-weight:700;flex-shrink:0">&times;</span><p style="color:rgba(245,242,237,.65);font-size:1rem;line-height:1.7">Early-stage environments without operational complexity</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- APPLICATION PROCESS -->
+  <div class="section dark">
+    <div class="section-inner">
+      <span class="lbl">Application Process</span>
+      <h2 class="h-section light" style="margin-bottom:1rem">Every session begins<br><em style="font-style:italic;color:var(--gold)">with an application.</em></h2>
+      <p class="body-lg light" style="margin-bottom:3rem">This ensures the work is right for you — and that you are ready for it.</p>
+      <div style="display:grid;grid-template-columns:60px 1fr;gap:0">
+        <div style="font-family:'Jost',sans-serif;font-size:1.2rem;font-weight:700;color:var(--gold);padding:1rem 0;border-bottom:1px solid rgba(245,242,237,.08)">01</div>
+        <div style="padding:1rem 0 1rem 2rem;border-bottom:1px solid rgba(245,242,237,.08)"><p style="font-size:1.05rem;font-weight:500;color:var(--ivory);margin-bottom:.4rem">Submit Your Application</p><p style="font-size:.95rem;color:rgba(245,242,237,.48);line-height:1.7">5 questions, approximately 10 minutes. This is how we determine fit before anything else moves forward.</p></div>
+        <div style="font-family:'Jost',sans-serif;font-size:1.2rem;font-weight:700;color:var(--gold);padding:1rem 0;border-bottom:1px solid rgba(245,242,237,.08)">02</div>
+        <div style="padding:1rem 0 1rem 2rem;border-bottom:1px solid rgba(245,242,237,.08)"><p style="font-size:1.05rem;font-weight:500;color:var(--ivory);margin-bottom:.4rem">Application Review</p><p style="font-size:.95rem;color:rgba(245,242,237,.48);line-height:1.7">Applications reviewed within 48 hours. We will say so directly if this is not the right entry point.</p></div>
+        <div style="font-family:'Jost',sans-serif;font-size:1.2rem;font-weight:700;color:var(--gold);padding:1rem 0;border-bottom:1px solid rgba(245,242,237,.08)">03</div>
+        <div style="padding:1rem 0 1rem 2rem;border-bottom:1px solid rgba(245,242,237,.08)"><p style="font-size:1.05rem;font-weight:500;color:var(--ivory);margin-bottom:.4rem">Pre-Session Brief</p><p style="font-size:.95rem;color:rgba(245,242,237,.48);line-height:1.7">Qualified leaders receive a scheduling link and pre-session brief upon acceptance.</p></div>
+        <div style="font-family:'Jost',sans-serif;font-size:1.2rem;font-weight:700;color:var(--gold);padding:1rem 0;border-bottom:1px solid rgba(245,242,237,.08)">04</div>
+        <div style="padding:1rem 0 1rem 2rem;border-bottom:1px solid rgba(245,242,237,.08)"><p style="font-size:1.05rem;font-weight:500;color:var(--ivory);margin-bottom:.4rem">Session Confirmed &amp; Conducted</p><p style="font-size:.95rem;color:rgba(245,242,237,.48);line-height:1.7">90 minutes. Structured. Focused. Yours.</p></div>
+        <div style="font-family:'Jost',sans-serif;font-size:1.2rem;font-weight:700;color:var(--gold);padding:1rem 0">05</div>
+        <div style="padding:1rem 0 1rem 2rem"><p style="font-size:1.05rem;font-weight:500;color:var(--ivory);margin-bottom:.4rem">Executive Diagnostic Brief Delivered</p><p style="font-size:.95rem;color:rgba(245,242,237,.48);line-height:1.7">Within 24 hours of the session. Clear, concise, and immediately actionable.</p></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- GUARANTEE + CONFIDENTIALITY -->
+  <div class="section taupe">
+    <div class="section-inner narrow">
+      <div style="background:var(--ivory);border-left:3px solid var(--gold);padding:2.5rem;margin-bottom:2rem">
+        <span class="lbl">Our Standard</span>
+        <p class="gold-italic" style="font-size:1.3rem">&ldquo;If the structural breakdown is not clearly identified and a decisive path forward is not established, the engagement is not complete. We will continue working with you at no additional cost until it is.&rdquo;</p>
+      </div>
+      <div style="display:flex;align-items:flex-start;gap:1.5rem;padding:2rem;background:var(--taupe);border:1px solid var(--taupe-dk)">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#4A5A4D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:3px"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+        <p class="body" style="font-style:italic">All discussions are strictly confidential. No recordings. No external distribution. This is a closed executive environment.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <div class="section dark" style="text-align:center">
+    <div class="section-inner narrow">
+      <h2 class="h-section light" style="margin-bottom:1.25rem">When something is off<br>but no one can clearly name it —<br><em style="font-style:italic;color:var(--gold)">this is where you fix it.</em></h2>
+      <p class="body-lg light" style="max-width:560px;margin:0 auto 2.5rem">For organizations requiring deeper structural alignment, this session often becomes the entry point into a broader engagement.</p>
+      <a href="https://form.jotform.com/260907823024050" target="_blank" class="btn-p" style="text-decoration:none">Apply for the Operational Clarity Intensive&trade; &rarr;</a>
+    </div>
+  </div>
+
+</div>
+
+
+</div>
+
+<!-- FOOTER -->
+<footer class="oci-footer">
+  <div class="oci-footer-inner">
+    <a href="/" style="text-decoration:none">
+      <img src="data:image/png;base64,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" alt="Frenetta Tate Global" style="height:44px;width:auto">
+    </a>
+    <ul class="oci-nav-links">
+      <li><a href="/" class="oci-nav-lbl">Home</a></li>
+      <li><a href="/#about" class="oci-nav-lbl">About</a></li>
+      <li><a href="/#work" class="oci-nav-lbl">The Work</a></li>
+      <li><a href="https://frenettatate.wixstudio.com/freegift" target="_blank" class="oci-nav-lbl">Leadership Audit</a></li>
+      <li><a href="https://frenettatate-droid.github.io/LIP/" target="_blank" class="oci-nav-lbl">Blog</a></li>
+      <li><a href="/#contact" class="oci-nav-cta">Work With Frenetta</a></li>
+    </ul>
+  </div>
+  <div class="oci-copyright">&copy; 2026 Frenetta Tate Global LLC. All Rights Reserved.</div>
+</footer>
+
+</body>
+</html>
