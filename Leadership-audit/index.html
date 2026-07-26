@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>The Leadership Blind Spot Assessment &mdash; Frenetta Tate Global</title>
+<meta name="description" content="Discover your primary leadership blind spot in 5 minutes. A direct, no-fluff diagnostic for leaders who are serious about growth." />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--charcoal:#1F1F1F;--ivory:#F5F2ED;--gold:#C2A46D;--taupe:#D9D4CC;--olive:#4A5A4D;--gold-light:rgba(194,164,109,0.10);--gold-border:rgba(194,164,109,0.35)}
+html,body{height:100%;overflow:hidden}
+body{font-family:'Jost',sans-serif;background:var(--charcoal);color:var(--ivory);overflow:hidden}
+#screen-results{overflow-y:auto;max-height:100vh}
+body::before{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");pointer-events:none;z-index:0;opacity:0.4}
+body::after{content:'';position:fixed;top:-200px;right:-200px;width:600px;height:600px;border-radius:50%;border:1px solid var(--gold-border);pointer-events:none;z-index:0}
+.page-wrap{position:relative;z-index:1;max-width:680px;margin:0 auto;padding:0 24px 60px}
+.site-nav{display:flex;align-items:center;justify-content:space-between;padding:20px 0 0;margin-bottom:52px}
+.nav-logo img{height:44px;width:auto}
+.nav-tag{font-size:9px;font-weight:400;letter-spacing:0.2em;text-transform:uppercase;color:rgba(194,164,109,0.5)}
+.screen{display:none;animation:fadeUp 0.5s ease forwards}
+.screen.active{display:block}
+@keyframes fadeUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
+.intro-wrap{text-align:center;padding:0 0 20px}
+.intro-kicker{display:inline-flex;align-items:center;gap:12px;font-size:13px;font-weight:400;letter-spacing:0.26em;text-transform:uppercase;color:var(--gold);margin-bottom:36px}
+.intro-kicker::before,.intro-kicker::after{content:'';display:block;width:36px;height:1px;background:var(--gold-border)}
+.intro-title{font-family:'Cormorant Garamond',serif;font-size:clamp(52px,10vw,76px);font-weight:500;line-height:1.05;color:var(--ivory);margin-bottom:8px}
+.intro-title em{font-style:italic;color:var(--gold)}
+.intro-subtitle{font-family:'Cormorant Garamond',serif;font-size:clamp(22px,4vw,30px);font-weight:300;font-style:italic;color:var(--taupe);margin-bottom:36px}
+.gold-rule{width:56px;height:1px;background:var(--gold);margin:0 auto 36px}
+.intro-desc{font-size:19px;font-weight:300;line-height:1.85;color:var(--taupe);max-width:520px;margin:0 auto 48px}
+.intro-stats{display:flex;justify-content:center;margin-bottom:48px;border:1px solid var(--gold-border);border-radius:8px;overflow:hidden;max-width:420px;margin-left:auto;margin-right:auto}
+.stat-item{flex:1;padding:24px 16px;text-align:center;border-right:1px solid var(--gold-border)}
+.stat-item:last-child{border-right:none}
+.stat-num{font-family:'Cormorant Garamond',serif;font-size:38px;font-weight:500;color:var(--gold);display:block;line-height:1;margin-bottom:8px}
+.stat-lbl{font-size:13px;font-weight:400;letter-spacing:0.16em;text-transform:uppercase;color:rgba(213,208,204,0.6);display:block}
+.btn-primary{display:inline-block;background:var(--gold);color:var(--charcoal);border:none;padding:18px 52px;font-family:'Jost',sans-serif;font-size:13px;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;border-radius:4px;cursor:pointer;transition:all 0.2s ease;text-decoration:none}
+.btn-primary:hover{background:var(--ivory);transform:translateY(-1px)}
+.intro-note{margin-top:22px;font-size:14px;font-weight:300;color:rgba(213,208,204,0.4);letter-spacing:0.06em}
+.q-wrap{padding-bottom:20px}
+.q-header{display:flex;align-items:center;gap:16px;margin-bottom:52px}
+.q-progress-track{flex:1;height:1.5px;background:rgba(217,212,204,0.2);border-radius:2px;overflow:hidden}
+.q-progress-fill{height:100%;background:var(--gold);border-radius:2px;transition:width 0.5s ease}
+.q-counter{font-size:13px;font-weight:400;letter-spacing:0.12em;color:rgba(194,164,109,0.6);white-space:nowrap}
+.q-category-tag{display:inline-block;font-size:11px;font-weight:400;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold);border:1px solid var(--gold-border);border-radius:2px;padding:5px 12px;margin-bottom:24px}
+.q-text{font-family:'Cormorant Garamond',serif;font-size:clamp(24px,4.5vw,32px);font-weight:400;line-height:1.45;color:var(--ivory);margin-bottom:48px;min-height:100px}
+.scale-header{display:flex;justify-content:space-between;margin-bottom:12px}
+.scale-header span{font-size:12px;letter-spacing:0.14em;text-transform:uppercase;color:rgba(213,208,204,0.45)}
+.scale-row{display:flex;gap:10px;margin-bottom:48px}
+.scale-btn{flex:1;aspect-ratio:1;max-width:90px;background:transparent;border:1px solid rgba(217,212,204,0.2);border-radius:8px;font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:400;color:rgba(245,242,237,0.5);cursor:pointer;transition:all 0.18s ease;display:flex;align-items:center;justify-content:center}
+.scale-btn:hover{border-color:var(--gold-border);color:var(--gold);background:var(--gold-light)}
+.scale-btn.selected{border-color:var(--gold);background:var(--gold-light);color:var(--gold)}
+.q-footer{display:flex;justify-content:flex-end}
+.btn-next{background:transparent;border:1px solid rgba(217,212,204,0.2);color:rgba(245,242,237,0.3);padding:13px 32px;font-family:'Jost',sans-serif;font-size:10px;font-weight:500;letter-spacing:0.16em;text-transform:uppercase;border-radius:4px;cursor:not-allowed;transition:all 0.2s ease}
+.btn-next.ready{border-color:var(--gold-border);color:var(--ivory);cursor:pointer}
+.btn-next.ready:hover{background:var(--gold-light);border-color:var(--gold);color:var(--gold)}
+.gate-wrap{text-align:center;max-width:480px;margin:0 auto;padding:40px 0}
+.gate-icon{width:56px;height:56px;border-radius:50%;border:1px solid var(--gold-border);display:flex;align-items:center;justify-content:center;margin:0 auto 28px}
+.gate-icon svg{width:22px;height:22px;stroke:var(--gold);fill:none;stroke-width:1.5;stroke-linecap:round}
+.gate-kicker{font-size:11px;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold);margin-bottom:16px}
+.gate-title{font-family:'Cormorant Garamond',serif;font-size:clamp(26px,5vw,36px);font-weight:500;color:var(--ivory);line-height:1.2;margin-bottom:14px}
+.gate-sub{font-size:16px;font-weight:300;color:var(--taupe);line-height:1.8;margin-bottom:36px}
+.gate-fields{display:flex;flex-direction:column;gap:12px;margin-bottom:16px}
+.gate-input{width:100%;padding:15px 18px;background:rgba(245,242,237,0.04);border:1px solid rgba(217,212,204,0.2);border-radius:6px;font-family:'Jost',sans-serif;font-size:16px;font-weight:300;color:var(--ivory);outline:none;transition:border-color 0.2s}
+.gate-input:focus{border-color:var(--gold-border)}
+.gate-input::placeholder{color:rgba(217,212,204,0.3)}
+.gate-privacy{font-size:13px;font-weight:300;color:rgba(217,212,204,0.3);letter-spacing:0.06em;margin-top:14px}
+.gate-error{font-size:13px;color:#e07070;margin-top:8px;display:none}
+.results-wrap{padding-bottom:20px}
+.results-hero{text-align:center;padding:52px 0 48px;border-bottom:1px solid var(--gold-border);margin-bottom:48px;position:relative}
+.results-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% 0%,rgba(194,164,109,0.06) 0%,transparent 70%);pointer-events:none}
+.results-kicker{font-size:11px;letter-spacing:0.26em;text-transform:uppercase;color:var(--gold);margin-bottom:20px}
+.results-greeting{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:300;font-style:italic;color:var(--taupe);margin-bottom:12px}
+.results-blind-spot{font-family:'Cormorant Garamond',serif;font-size:clamp(32px,6vw,48px);font-weight:600;color:var(--gold);line-height:1.1;margin-bottom:6px}
+.results-blind-tag{font-size:12px;letter-spacing:0.14em;text-transform:uppercase;color:rgba(194,164,109,0.5);margin-bottom:28px}
+.results-gold-rule{width:40px;height:1px;background:var(--gold);margin:0 auto 28px}
+.results-summary{font-size:17px;font-weight:300;line-height:1.9;color:var(--taupe);max-width:480px;margin:0 auto}
+.section-label{font-size:11px;font-weight:400;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold);margin-bottom:24px;padding-bottom:10px;border-bottom:1px solid rgba(217,212,204,0.1)}
+.score-row{display:flex;align-items:center;gap:16px;margin-bottom:16px}
+.score-name{font-size:14px;font-weight:400;color:rgba(245,242,237,0.6);width:190px;flex-shrink:0;line-height:1.3}
+.score-name.primary{color:var(--gold);font-weight:500}
+.score-track{flex:1;height:3px;background:rgba(217,212,204,0.12);border-radius:3px;overflow:hidden}
+.score-fill{height:100%;background:rgba(217,212,204,0.25);border-radius:3px;transition:width 1s ease 0.2s;width:0%}
+.score-fill.primary{background:var(--gold)}
+.score-pct{font-family:'Jost',sans-serif;font-size:13px;font-weight:400;color:rgba(245,242,237,0.4);width:36px;text-align:right;flex-shrink:0}
+.score-pct.primary{color:var(--gold)}
+.truth-section{margin:40px 0}
+.truth-box{border-left:2px solid var(--gold);padding:22px 24px;background:var(--gold-light);border-radius:0 8px 8px 0}
+.truth-box p{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:400;font-style:italic;color:var(--ivory);line-height:1.65}
+.cta-section{margin-top:48px;border:1px solid var(--gold-border);border-radius:12px;padding:40px 36px;text-align:center;background:rgba(194,164,109,0.04);position:relative;overflow:hidden}
+.cta-section::before{content:'';position:absolute;bottom:-60px;right:-60px;width:180px;height:180px;border-radius:50%;border:1px solid var(--gold-border);pointer-events:none}
+.cta-eyebrow{font-size:11px;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold);margin-bottom:14px}
+.cta-title{font-family:'Cormorant Garamond',serif;font-size:clamp(24px,4vw,32px);font-weight:500;color:var(--ivory);line-height:1.2;margin-bottom:14px}
+.cta-price{font-family:'Cormorant Garamond',serif;font-size:17px;font-weight:300;font-style:italic;color:var(--gold);margin-bottom:16px}
+.cta-desc{font-size:15px;font-weight:300;color:var(--taupe);line-height:1.8;max-width:380px;margin:0 auto 28px}
+.cta-bullets{list-style:none;text-align:left;max-width:340px;margin:0 auto 28px;display:flex;flex-direction:column;gap:8px}
+.cta-bullets li{font-size:14px;font-weight:300;color:var(--taupe);padding-left:18px;position:relative;line-height:1.6}
+.cta-bullets li::before{content:'◦';position:absolute;left:0;color:var(--gold)}
+.btn-apply{display:inline-block;background:var(--gold);color:var(--charcoal);border:none;padding:16px 44px;font-family:'Jost',sans-serif;font-size:13px;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;border-radius:4px;cursor:pointer;transition:all 0.2s ease;text-decoration:none}
+.btn-apply:hover{background:var(--ivory);transform:translateY(-1px)}
+.cta-note{margin-top:14px;font-size:12px;font-weight:300;color:rgba(217,212,204,0.3);letter-spacing:0.06em}
+.page-footer{margin-top:60px;padding-top:28px;border-top:1px solid rgba(217,212,204,0.1);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px}
+.footer-brand{font-family:'Cormorant Garamond',serif;font-size:13px;font-style:italic;color:rgba(194,164,109,0.5);text-decoration:none}
+@media(max-width:480px){.page-wrap{padding:0 18px 60px}.site-nav{margin-bottom:40px}.intro-stats{max-width:100%}.score-name{width:130px;font-size:11px}.cta-section{padding:28px 20px}.page-footer{flex-direction:column;align-items:flex-start}}
+</style>
+</head>
+<body>
+<div class="page-wrap">
+  <nav class="site-nav">
+    <a class="nav-logo" href="https://frenettatate.com">
+      <img src="data:image/png;base64,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" alt="Frenetta Tate Global">
+    </a>
+    <span class="nav-tag">Free Assessment</span>
+  </nav>
+
+  <div class="screen active" id="screen-intro">
+    <div class="intro-wrap">
+      <div class="intro-kicker">Leadership Diagnostic</div>
+      <h1 class="intro-title">The Leadership<br><em>Blind Spot</em></h1>
+      <p class="intro-subtitle">Assessment</p>
+      <div class="gold-rule"></div>
+      <p class="intro-desc">Most leaders don&rsquo;t fail because they lack ambition. They fail because they cannot see what is quietly working against them. This assessment names your primary blind spot &mdash; directly and without apology.</p>
+      <div class="intro-stats">
+        <div class="stat-item"><span class="stat-num">12</span><span class="stat-lbl">Questions</span></div>
+        <div class="stat-item"><span class="stat-num">6</span><span class="stat-lbl">Categories</span></div>
+        <div class="stat-item"><span class="stat-num">5</span><span class="stat-lbl">Minutes</span></div>
+      </div>
+      <button class="btn-primary" onclick="startAssessment()">Begin Assessment</button>
+      <p class="intro-note">No cost. No obligation. Just uncommon clarity.</p>
+    </div>
+  </div>
+
+  <div class="screen" id="screen-questions">
+    <div class="q-wrap">
+      <div class="q-header">
+        <div class="q-progress-track"><div class="q-progress-fill" id="progress-fill" style="width:0%"></div></div>
+        <div class="q-counter" id="q-counter">1 of 12</div>
+      </div>
+      <div class="q-category-tag" id="q-category">&mdash;</div>
+      <p class="q-text" id="q-text">Loading...</p>
+      <div class="scale-header"><span>Never</span><span>Always</span></div>
+      <div class="scale-row">
+        <button class="scale-btn" onclick="selectScore(1)">1</button>
+        <button class="scale-btn" onclick="selectScore(2)">2</button>
+        <button class="scale-btn" onclick="selectScore(3)">3</button>
+        <button class="scale-btn" onclick="selectScore(4)">4</button>
+        <button class="scale-btn" onclick="selectScore(5)">5</button>
+      </div>
+      <div class="q-footer">
+        <button class="btn-next" id="btn-next" onclick="nextQuestion()">Next &rarr;</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="screen" id="screen-gate">
+    <div class="gate-wrap">
+      <div class="gate-icon">
+        <svg viewBox="0 0 24 24"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2z"/><path d="M22 6l-10 7L2 6"/></svg>
+      </div>
+      <div class="gate-kicker">Your Results Are Ready</div>
+      <h2 class="gate-title">Where should we<br>send your results?</h2>
+      <p class="gate-sub">Enter your name and email. Your blind spot report will display immediately.</p>
+      <div class="gate-fields">
+        <input class="gate-input" type="text" id="input-name" placeholder="First Name" autocomplete="given-name" />
+        <input class="gate-input" type="email" id="input-email" placeholder="Email Address" autocomplete="email" />
+        <button class="btn-primary" onclick="revealResults()">Reveal My Blind Spot</button>
+      </div>
+      <div class="gate-error" id="gate-error">Please enter a valid email address to continue.</div>
+      <p class="gate-privacy">No spam. No sharing. Just clarity.</p>
+    </div>
+  </div>
+
+  <div class="screen" id="screen-results">
+    <div class="results-wrap">
+      <div class="results-hero">
+        <div class="results-kicker">Your Primary Leadership Blind Spot</div>
+        <p class="results-greeting" id="results-greeting">&mdash;</p>
+        <div class="results-blind-spot" id="results-blind-spot">&mdash;</div>
+        <div class="results-blind-tag" id="results-blind-tag">&mdash;</div>
+        <div class="results-gold-rule"></div>
+        <p class="results-summary" id="results-summary">&mdash;</p>
+      </div>
+      <div class="section-label">Your Full Leadership Breakdown</div>
+      <div id="score-rows"></div>
+      <div class="truth-section">
+        <div class="truth-box"><p id="truth-statement">&mdash;</p></div>
+      </div>
+      <div class="cta-section">
+        <div class="cta-eyebrow">Your Next Step</div>
+        <h3 class="cta-title">The Operational Clarity Intensive&trade;</h3>
+        <div class="cta-price">$2,500 &middot; By Application Only</div>
+        <p class="cta-desc">One focused session. One leader. Uncommon clarity on exactly where your leadership is costing you &mdash; and a precise path forward.</p>
+        <ul class="cta-bullets">
+          <li>A full diagnostic of your operating model and leadership gaps</li>
+          <li>A clear, prioritized action plan you can implement immediately</li>
+          <li>Direct, unfiltered coaching from Frenetta Tate</li>
+          <li>Limited availability &mdash; by application only</li>
+        </ul>
+        <a class="btn-apply" href="https://form.jotform.com/260907823024050" target="_blank">Apply Now</a>
+        <p class="cta-note">Applications reviewed within 48 hours</p>
+      </div>
+    </div>
+  </div>
+
+  <footer class="page-footer">
+    <a class="footer-brand" href="https://frenettatate.com">&larr; Frenetta Tate Global</a>
+    <span style="font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:rgba(217,212,204,0.25)">&copy; 2026 Frenetta Tate Global LLC</span>
+  </footer>
+</div>
+
+<script>
+const questions=[
+  {category:"Self-Awareness & Ego",text:"I actively seek feedback that challenges my perspective — and genuinely act on it."},
+  {category:"Self-Awareness & Ego",text:"When a decision goes wrong, I examine my own role before looking at external factors."},
+  {category:"Team Trust & Communication",text:"My team feels safe bringing me problems before they become crises."},
+  {category:"Team Trust & Communication",text:"The people I lead would describe me as consistent, clear, and trustworthy under pressure."},
+  {category:"Vision vs. Execution Gap",text:"The goals I set translate directly into clear action steps my team can execute without confusion."},
+  {category:"Vision vs. Execution Gap",text:"My vision is communicated so clearly that my team could articulate it without me in the room."},
+  {category:"Operational Clarity & Systems",text:"My team operates from documented processes — not tribal knowledge or my constant presence."},
+  {category:"Operational Clarity & Systems",text:"I can step away for two weeks and my operation runs without significant disruption."},
+  {category:"Decision-Making Under Pressure",text:"Under pressure, I make decisions based on data and principle — not urgency or emotion."},
+  {category:"Decision-Making Under Pressure",text:"I can identify a clear decision-making framework that I apply consistently across my team."},
+  {category:"Delegation & Control",text:"I delegate outcomes, not just tasks — and I resist the urge to take work back once given."},
+  {category:"Delegation & Control",text:"My team is empowered to make decisions at their level without waiting for my approval."}
+];
+const categories=["Self-Awareness & Ego","Team Trust & Communication","Vision vs. Execution Gap","Operational Clarity & Systems","Decision-Making Under Pressure","Delegation & Control"];
+const blindSpots={
+  "Self-Awareness & Ego":{label:"The Ego Blind Spot",tag:"Self-Awareness & Ego",summary:"Your leadership has a gap between how you see yourself and how others experience you. This is not about arrogance — it is about insulation. You may be surrounded by people who have stopped telling you the truth because experience has taught them it is not safe to.",truth:"The leader who cannot be corrected eventually leads alone. Clarity begins with the courage to see yourself accurately — not as you wish to be seen, but as you actually are."},
+  "Team Trust & Communication":{label:"The Trust Gap",tag:"Team Trust & Communication",summary:"Your team may be performing — but not at full capacity, because they do not feel safe enough to bring you the real problems. Compliance has replaced candor, and that is costing you more than you know. The silence in your meetings is data.",truth:"People perform at the level of their trust in their leader. If they are holding back, so is your results ceiling. The most dangerous thing a team can do is agree with you when they shouldn’t."},
+  "Vision vs. Execution Gap":{label:"The Vision-Execution Divide",tag:"Vision vs. Execution Gap",summary:"You can see where you are going clearly. The problem is that your team is navigating by feel. The gap between your vision and their daily actions is wider than you think — and it is showing up in missed targets, misaligned effort, and a team that works hard in the wrong direction.",truth:"A vision that lives only in the leader’s head is just a dream. Execution is what turns intention into impact. If your people cannot articulate where you are going, you are not leading — you are hoping."},
+  "Operational Clarity & Systems":{label:"The Systems Deficit",tag:"Operational Clarity & Systems",summary:"Your operation runs on your presence, your institutional knowledge, and your constant involvement. That is not leadership — that is a dependency. The moment you step back, the cracks appear. You have built a team that cannot function without you, which means you cannot grow beyond your own capacity.",truth:"If your team needs you to function, you have not built a team — you have built a habit. Systems create freedom. Clarity creates scale. Right now, you are the bottleneck."},
+  "Decision-Making Under Pressure":{label:"The Pressure Point",tag:"Decision-Making Under Pressure",summary:"Under stress, your decision-making becomes reactive rather than principled. This creates inconsistency that your team notices — and absorbs — even when you do not. The quality of your decisions under pressure defines the quality of your leadership more than any other single variable.",truth:"Pressure does not build character — it reveals it. The question is whether what gets revealed is leading your team forward or sideways. Your team calibrates their confidence against yours."},
+  "Delegation & Control":{label:"The Control Paradox",tag:"Delegation & Control",summary:"You are holding on to too much. It may feel like responsibility, like thoroughness, like caring — but it is functioning as a ceiling. For you, and for every person on your team who is waiting for room to lead. The harder you grip, the smaller your impact becomes.",truth:"Control is not leadership. The leader who cannot let go is telling their team something loud and clear: I do not trust you. And they believe it — and they stop trying."}
+};
+let current=0,scores={},selectedScore=null;
+categories.forEach(k=>scores[k]=0);
+function showScreen(id){document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));document.getElementById(id).classList.add('active');}
+function startAssessment(){showScreen('screen-questions');renderQuestion();}
+function renderQuestion(){const q=questions[current];document.getElementById('q-category').textContent=q.category;document.getElementById('q-text').textContent=q.text;document.getElementById('q-counter').textContent=(current+1)+' of '+questions.length;document.getElementById('progress-fill').style.width=(current/questions.length*100)+'%';selectedScore=null;document.querySelectorAll('.scale-btn').forEach(b=>b.classList.remove('selected'));document.getElementById('btn-next').classList.remove('ready');}
+function selectScore(val){selectedScore=val;document.querySelectorAll('.scale-btn').forEach((b,i)=>{b.classList.toggle('selected',i+1===val);});document.getElementById('btn-next').classList.add('ready');}
+function nextQuestion(){if(selectedScore===null)return;scores[questions[current].category]+=selectedScore;current++;if(current<questions.length){renderQuestion();}else{showScreen('screen-gate');}}
+function revealResults(){const name=document.getElementById('input-name').value.trim()||'Leader';const email=document.getElementById('input-email').value.trim();const errEl=document.getElementById('gate-error');if(!email||!email.includes('@')){errEl.style.display='block';return;}errEl.style.display='none';buildResults(name);showScreen('screen-results');setTimeout(animateBars,300);}
+function buildResults(name){let minScore=99,primaryCat='';categories.forEach(k=>{if(scores[k]<minScore){minScore=scores[k];primaryCat=k;}});const data=blindSpots[primaryCat];document.getElementById('results-greeting').textContent=name+', here is your result.';document.getElementById('results-blind-spot').textContent=data.label;document.getElementById('results-blind-tag').textContent=data.tag;document.getElementById('results-summary').textContent=data.summary;document.getElementById('truth-statement').textContent=data.truth;const maxPossible=10;let html='';categories.forEach(k=>{const pct=Math.round((scores[k]/maxPossible)*100);const isPrimary=k===primaryCat;html+=`<div class="score-row"><div class="score-name ${isPrimary?'primary':''}">${k}</div><div class="score-track"><div class="score-fill ${isPrimary?'primary':''}" data-pct="${pct}" style="width:0%"></div></div><div class="score-pct ${isPrimary?'primary':''}">${pct}%</div></div>`;});document.getElementById('score-rows').innerHTML=html;}
+function animateBars(){document.querySelectorAll('.score-fill').forEach(bar=>{bar.style.width=bar.getAttribute('data-pct')+'%';});}
+</script>
+</body>
+</html>
