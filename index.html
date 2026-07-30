@@ -225,6 +225,7 @@ nav label { cursor:pointer }
     <li><a onclick="showPage('work')" style="font-size:.72rem;font-weight:500;letter-spacing:.07em;text-transform:uppercase;text-decoration:none;cursor:pointer;color:var(--c80);transition:color .3s">The Work</a></li>
     <li><a href="/oci" style="font-size:.72rem;font-weight:500;letter-spacing:.07em;text-transform:uppercase;text-decoration:none;cursor:pointer;color:var(--c80);transition:color .3s">Operational Clarity Intensive</a></li>
     <li><a href="/Leadership-audit" style="font-size:.72rem;font-weight:500;letter-spacing:.07em;text-transform:uppercase;text-decoration:none;cursor:pointer;color:var(--c80);transition:color .3s">Leadership Audit</a></li>
+    <li><a href="/world-of-frenetta" style="font-size:.72rem;font-weight:500;letter-spacing:.07em;text-transform:uppercase;text-decoration:none;cursor:pointer;color:var(--c80);transition:color .3s">The World of Frenetta</a></li>
     <li><a href="https://frenettatate-droid.github.io/LIP/" target="_blank" style="font-size:.72rem;font-weight:500;letter-spacing:.07em;text-transform:uppercase;text-decoration:none;cursor:pointer;color:var(--c80);transition:color .3s">Blog</a></li>
     <li><a onclick="showPage('contact')" style="font-size:.72rem;font-weight:500;letter-spacing:.07em;text-transform:uppercase;text-decoration:none;cursor:pointer;color:var(--charcoal);border:1px solid var(--charcoal);padding:.4rem 1.25rem;display:inline-block;transition:all .3s">Work With Frenetta</a></li>
   </ul>
@@ -890,31 +891,13 @@ nav label { cursor:pointer }
       <li><span onclick="showPage('work')" class="footer-lbl" style="cursor:pointer">The Work</span></li>
       <li><a href="/oci" class="footer-lbl" style="text-decoration:none">Operational Clarity Intensive</a></li>
       <li><a href="/Leadership-audit" class="footer-lbl" style="text-decoration:none">Leadership Audit</a></li>
+      <li><a href="/world-of-frenetta" class="footer-lbl" style="text-decoration:none">The World of Frenetta</a></li>
       <li><a href="https://frenettatate-droid.github.io/LIP/" target="_blank" class="footer-lbl" style="text-decoration:none">Blog</a></li>
       <li><span onclick="showPage('contact')" class="footer-lbl nav-cta-lbl" style="cursor:pointer">Work With Frenetta</span></li>
     </ul>
   </div>
   <div style="width:100%;max-width:1200px;margin:.75rem auto 0;border-top:1px solid var(--taupe);padding-top:.75rem;text-align:center;font-size:.72rem;color:var(--c80);letter-spacing:.05em">&copy; 2026 Frenetta Tate Global LLC. All Rights Reserved.</div>
-</footer>wPage(id) {
-  var pages = document.querySelectorAll('.page');
-  pages.forEach(function(p){ p.style.display='none'; });
-  var t = document.querySelector('.page-'+id);
-  if(t){ t.style.display='block'; }
-  window.scrollTo(0,0);
-  document.documentElement.scrollTop=0;
-  document.body.scrollTop=0;
-}
-function toggleNav(){
-  var ul=document.querySelector('.nav-links');
-  ul.style.display=(ul.style.display==='flex')?'none':'flex';
-}
-// Initialise on load
-document.addEventListener('DOMContentLoaded',function(){
-  document.querySelectorAll('.page').forEach(function(p){ p.style.display='none'; });
-  var h=document.querySelector('.page-home');
-  if(h) h.style.display='block';
-});
-</script>
+</footer>
 <script>
 function showPage(id) {
   document.querySelectorAll('.page').forEach(function(p) {
