@@ -915,5 +915,28 @@ document.addEventListener('DOMContentLoaded',function(){
   if(h) h.style.display='block';
 });
 </script>
+<script>
+function showPage(id) {
+  document.querySelectorAll('.page').forEach(function(p) {
+    p.style.display = 'none';
+  });
+  var t = document.querySelector('.page-' + id);
+  if (t) { t.style.display = 'block'; }
+  window.scrollTo(0, 0);
+  document.documentElement.scrollTop = 0;
+  document.body.scrollTop = 0;
+}
+function toggleNav() {
+  var ul = document.querySelector('.nav-links');
+  ul.style.display = (ul.style.display === 'flex') ? 'none' : 'flex';
+}
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.page').forEach(function(p) {
+    p.style.display = 'none';
+  });
+  var home = document.querySelector('.page-home');
+  if (home) home.style.display = 'block';
+});
+</script>
 </body>
 </html>
