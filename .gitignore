@@ -1,0 +1,36 @@
+# Ignore everything
+*
+
+# Except HTML files and folders we want
+!*.html
+!*/
+!*/index.html
+
+# Ignore common system and Office files
+*.docx
+*.xlsx
+*.pdf
+*.pptx
+*.dotx
+*.potx
+*.doc
+*.xls
+*.ppt
+*.csv
+*.txt
+*.md
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.svg
+*.mp4
+*.mp3
+*.zip
+*.DS_Store
+Thumbs.db
+desktop.ini
+
+# Ignore OneDrive and sync folders
+.OneDrive*/
+*.lnk
