@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beyond the Post — A Manifesto for Professional Stewardship</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Jost:wght@400;500;600&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Jost', sans-serif;
+            line-height: 1.8;
+            color: #1f1f1f;
+            background-color: #ffffff;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+
+        /* HERO SECTION */
+        .hero {
+            padding: 60px 0 80px;
+            text-align: center;
+            border-bottom: 2px solid #1f1f1f;
+        }
+
+        .hero h1 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 72px;
+            font-weight: 700;
+            letter-spacing: -1px;
+            margin-bottom: 20px;
+            line-height: 1.2;
+            color: #1f1f1f;
+        }
+
+        .hero .subtitle {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 14px;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #666;
+            margin-bottom: 40px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            line-height: 1.9;
+            color: #333;
+            max-width: 700px;
+            margin: 0 auto 50px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: #1f1f1f;
+            color: #ffffff;
+            padding: 16px 48px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 14px;
+            font-weight: 600;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border: 2px solid #1f1f1f;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .cta-button:hover {
+            background-color: #ffffff;
+            color: #1f1f1f;
+        }
+
+        /* SECTION SPACING */
+        section {
+            padding: 60px 0;
+            border-bottom: 1px solid #e5e5e5;
+        }
+
+        section:last-of-type {
+            border-bottom: none;
+        }
+
+        section h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 50px;
+            color: #1f1f1f;
+            line-height: 1.3;
+        }
+
+        /* THE WORK SECTION */
+        .work-intro {
+            margin-bottom: 60px;
+        }
+
+        .work-intro p {
+            font-size: 18px;
+            line-height: 1.9;
+            margin-bottom: 25px;
+            color: #333;
+        }
+
+        .principle-box {
+            background-color: #f5f5f5;
+            padding: 40px;
+            margin: 40px 0;
+            border-left: 4px solid #1f1f1f;
+            font-size: 16px;
+            line-height: 1.9;
+            font-style: italic;
+        }
+
+        /* SERVICE CARDS */
+        .services {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+
+        .service-card {
+            border: 1px solid #d5d5d5;
+            padding: 40px;
+            transition: all 0.3s ease;
+        }
+
+        .service-card:hover {
+            border-color: #1f1f1f;
+            background-color: #f9f9f9;
+        }
+
+        .service-card h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            color: #1f1f1f;
+        }
+
+        .service-card p {
+            font-size: 16px;
+            line-height: 1.8;
+            color: #444;
+            margin-bottom: 20px;
+        }
+
+        .service-tag {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #888;
+        }
+
+        /* FRAMEWORKS SECTION */
+        .frameworks-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+        }
+
+        .framework {
+            margin-bottom: 45px;
+            padding-bottom: 45px;
+            border-bottom: 1px solid #e5e5e5;
+        }
+
+        .framework:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .framework-name {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 22px;
+            font-weight: 700;
+            color: #1f1f1f;
+            margin-bottom: 12px;
+        }
+
+        .framework-equation {
+            font-family: 'Jost', sans-serif;
+            font-size: 18px;
+            font-weight: 600;
+            color: #1f1f1f;
+            letter-spacing: 0.5px;
+        }
+
+        /* EXPLORE SECTION */
+        .explore-list {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px 40px;
+            margin-bottom: 40px;
+        }
+
+        .explore-item {
+            padding-left: 24px;
+            position: relative;
+            font-size: 16px;
+            line-height: 1.8;
+            color: #333;
+        }
+
+        .explore-item::before {
+            content: "◦";
+            position: absolute;
+            left: 0;
+            font-size: 20px;
+            color: #1f1f1f;
+        }
+
+        .explore-emphasis {
+            font-style: italic;
+            color: #1f1f1f;
+            font-weight: 500;
+        }
+
+        /* WHO IT'S FOR */
+        .audience-list {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px 30px;
+        }
+
+        .audience-item {
+            padding-left: 24px;
+            position: relative;
+            font-size: 16px;
+            line-height: 1.7;
+            color: #333;
+        }
+
+        .audience-item::before {
+            content: "◦";
+            position: absolute;
+            left: 0;
+            font-size: 20px;
+            color: #1f1f1f;
+        }
+
+        /* ABOUT SECTION */
+        .about-text {
+            font-size: 18px;
+            line-height: 1.9;
+            color: #333;
+            margin-bottom: 25px;
+        }
+
+        .about-philosophy {
+            background-color: #f5f5f5;
+            padding: 40px;
+            margin: 40px 0;
+            border-left: 4px solid #1f1f1f;
+            font-size: 16px;
+            line-height: 1.9;
+            font-style: italic;
+        }
+
+        /* FINAL CTA */
+        .final-cta {
+            text-align: center;
+            padding: 60px 0;
+        }
+
+        .final-cta h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 36px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            color: #1f1f1f;
+        }
+
+        .final-cta p {
+            font-size: 18px;
+            line-height: 1.8;
+            color: #444;
+            margin-bottom: 40px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 24px;
+            }
+
+            .hero {
+                padding: 60px 0 80px;
+            }
+
+            .hero h1 {
+                font-size: 48px;
+            }
+
+            .services {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .explore-list,
+            .audience-list {
+                grid-template-columns: 1fr;
+            }
+
+            .frameworks-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            section {
+                padding: 40px 0;
+            }
+
+            section h2 {
+                font-size: 36px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- HERO -->
+        <section class="hero">
+            <h1>Beyond the Post</h1>
+            <p class="subtitle">A Manifesto for Professional Stewardship™</p>
+            <p>What happens when we stop thinking only about how we show up professionally and begin thinking about what our presence contributes to the communities around us?</p>
+            <a href="https://form.jotform.com/262397246717063" class="cta-button">Start the Conversation</a>
+        </section>
+
+        <!-- THE WORK BEHIND THE CONVERSATION -->
+        <section>
+            <h2>The Work Behind the Conversation</h2>
+            <div class="work-intro">
+                <p>Professional culture is not created only through policies, programs, or leadership initiatives.</p>
+                <p>It is also created in meetings. In conversations. In the questions people are willing to ask. In how disagreement is handled. In whether knowledge is generously shared. In whether people participate merely to be seen or because they have something meaningful to contribute.</p>
+                <p>Professional Stewardship™ gives organizations language and frameworks for examining those everyday choices more intentionally.</p>
+                <p>At its heart is a simple principle:</p>
+                <div class="principle-box">
+                    "Professional stewardship is the intentional practice of strengthening the communities that strengthen us."
+                </div>
+            </div>
+        </section>
+
+        <!-- BRING THE WORK IN -->
+        <section>
+            <h2>Bring the Work In</h2>
+            <div class="services">
+                <div class="service-card">
+                    <h3>Keynotes & Conference Sessions</h3>
+                    <p>A thought-provoking introduction to the ideas behind Beyond the Post™ and Professional Stewardship™.</p>
+                    <p>Sessions explore the responsibility that comes with having a professional voice, the difference between visibility and value, meaningful contribution, credibility, trust, and the role each of us plays in shaping professional culture.</p>
+                    <p class="service-tag">Ideal for: Conferences, leadership gatherings, employee events, professional associations, retreats</p>
+                </div>
+
+                <div class="service-card">
+                    <h3>Professional Stewardship™ Workshops</h3>
+                    <p>Move beyond the ideas and put them into practice.</p>
+                    <p>Interactive workshops use frameworks, equations, Reality Checks™, and reflection questions to help participants examine how they communicate, contribute, build credibility, create connection, and strengthen the communities around them.</p>
+                    <p class="service-tag">Ideal for: Leadership development, professional development, team learning, employee engagement</p>
+                </div>
+
+                <div class="service-card">
+                    <h3>Leadership & Team Experiences</h3>
+                    <p>Sometimes an organization does not need another presentation. It needs a better conversation.</p>
+                    <p>These facilitated experiences create space for leadership teams and employee groups to examine the behaviors, assumptions, communication patterns, and everyday interactions shaping their shared environment.</p>
+                    <p class="service-tag">Ideal for: Leadership teams, employee groups, culture-building initiatives</p>
+                </div>
+
+                <div class="service-card">
+                    <h3>Book + Conversation Experiences</h3>
+                    <p>Give participants something they can continue carrying after the session ends.</p>
+                    <p>Pair copies of Beyond the Post™ with a keynote, workshop, facilitated discussion, or leadership conversation to create a shared learning experience around Professional Stewardship™.</p>
+                    <p class="service-tag">Ideal for: Leadership cohorts, conferences, retreats, professional associations</p>
+                </div>
+
+                <div class="service-card">
+                    <h3>Organizational Advisory & Consulting</h3>
+                    <p>For organizations ready to go deeper, Frenetta Tate Global provides advisory and consulting support.</p>
+                    <p>Focus areas include organizational clarity, alignment, workplace experience, operational effectiveness, and the systems that shape how people experience work.</p>
+                    <p class="service-tag">Beyond the conversation — examining what the organization itself may need</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- WHAT PARTICIPANTS WILL EXPLORE -->
+        <section>
+            <h2>What Participants Will Explore</h2>
+            <p style="font-size: 18px; line-height: 1.9; margin-bottom: 50px; color: #333;">The work is designed to create thought and conversation, not prescribe a single way of thinking. Participants may explore:</p>
+            <div class="explore-list">
+                <div class="explore-item">The difference between participation and meaningful contribution</div>
+                <div class="explore-item">Why visibility and influence are not the same</div>
+                <div class="explore-item">How curiosity and humility strengthen professional credibility</div>
+                <div class="explore-item">The relationship between consistency and trust</div>
+                <div class="explore-item">How everyday conversations influence professional culture</div>
+                <div class="explore-item">What meaningful discourse requires from all participants</div>
+                <div class="explore-item">How stronger professional connections are built</div>
+                <div class="explore-item">What it means to practice Professional Stewardship™</div>
+                <div class="explore-item">The responsibility each person carries for the communities they help shape</div>
+            </div>
+            <p style="font-size: 18px; line-height: 1.9; margin-top: 50px; color: #333;">And perhaps most importantly:</p>
+            <p class="explore-emphasis" style="font-size: 18px; margin-top: 20px;">"What does this community need that we are uniquely positioned to offer?"</p>
+        </section>
+
+        <!-- THE IDEAS BECOME TOOLS -->
+        <section>
+            <h2>The Ideas Become Tools</h2>
+            <p style="font-size: 18px; line-height: 1.9; margin-bottom: 60px; color: #333;">Beyond the Post™ introduces memorable frameworks and equations that give participants language they can continue using long after the experience.</p>
+
+            <div class="frameworks-grid">
+                <div>
+                    <div class="framework">
+                        <div class="framework-name">The Community Equation™</div>
+                        <div class="framework-equation">People × Participation = Community</div>
+                    </div>
+
+                    <div class="framework">
+                        <div class="framework-name">The Visibility Equation™</div>
+                        <div class="framework-equation">Visibility − Value = Noise</div>
+                    </div>
+
+                    <div class="framework">
+                        <div class="framework-name">The Credibility Equation™</div>
+                        <div class="framework-equation">Curiosity + Humility = Credibility</div>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="framework">
+                        <div class="framework-name">The Contribution Equation™</div>
+                        <div class="framework-equation">Intention + Generosity = Contribution</div>
+                    </div>
+
+                    <div class="framework">
+                        <div class="framework-name">The Stewardship Equation™</div>
+                        <div class="framework-equation">Contribution × Consistency = Trust</div>
+                    </div>
+
+                    <div class="framework">
+                        <div class="framework-name">The Legacy Equation™</div>
+                        <div class="framework-equation">Contribution × Time = Legacy</div>
+                    </div>
+                </div>
+            </div>
+
+            <p style="font-size: 16px; line-height: 1.8; margin-top: 60px; color: #333; font-style: italic;">These ideas are not intended to remain on a presentation slide. They are designed to become conversation starters, reflection tools, and shared language organizations can carry forward.</p>
+        </section>
+
+        <!-- WHO THIS WORK IS FOR -->
+        <section>
+            <h2>Who This Work Is For</h2>
+            <p style="font-size: 18px; line-height: 1.9; margin-bottom: 50px; color: #333;">Beyond the Post™ experiences can be adapted for:</p>
+            <div class="audience-list">
+                <div class="audience-item">Corporations and businesses</div>
+                <div class="audience-item">Leadership teams</div>
+                <div class="audience-item">Professional associations</div>
+                <div class="audience-item">Conferences and summits</div>
+                <div class="audience-item">Government and public-sector organizations</div>
+                <div class="audience-item">Nonprofit organizations</div>
+                <div class="audience-item">Healthcare organizations</div>
+                <div class="audience-item">Educational institutions</div>
+                <div class="audience-item">Employee and professional development programs</div>
+                <div class="audience-item">Women's leadership communities</div>
+                <div class="audience-item">Employee resource and affinity groups</div>
+            </div>
+            <p style="font-size: 18px; line-height: 1.9; margin-top: 50px; color: #333; font-style: italic;">The common denominator is simple: people who want the professional communities they influence to be stronger because they participated.</p>
+        </section>
+
+        <!-- ABOUT FRENETTA TATE -->
+        <section>
+            <h2>About Frenetta Tate</h2>
+            <p class="about-text">Frenetta Tate is an organizational clarity strategist, leadership advisor, author, and founder of Frenetta Tate Global.</p>
+            <p class="about-text">With more than 15 years of experience across enterprise operations, workplace experience, organizational governance, executive partnership, and employee engagement, her work examines an often-overlooked dimension of organizational life: the systems, behaviors, decisions, and everyday interactions through which people actually experience an organization.</p>
+            <div class="about-philosophy">
+                "Employees experience leadership through systems long before they experience leadership through people."
+            </div>
+            <p class="about-text">Through her writing, advisory work, frameworks, and facilitated conversations, Frenetta helps leaders and organizations bring greater intention to what they are building and what people experience because of it.</p>
+            <p class="about-text">She is the author of Beyond the Post™: A Manifesto for Professional Stewardship™.</p>
+        </section>
+
+        <!-- FINAL CTA -->
+        <section class="final-cta">
+            <h3>Start the Conversation</h3>
+            <p>You do not need to know exactly which experience you need before reaching out. Tell us about your organization, your audience, and what you hope to accomplish. From there, we can determine the right fit.</p>
+            <a href="https://form.jotform.com/262397246717063" class="cta-button">Bring the Conversation Into Your Organization</a>
+        </section>
+    </div>
+</body>
+</html>
