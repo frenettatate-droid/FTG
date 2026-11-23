@@ -1,505 +1,252 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Beyond the Post — A Manifesto for Professional Stewardship</title>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Jost:wght@400;500;600&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Jost', sans-serif;
-            line-height: 1.8;
-            color: #1f1f1f;
-            background-color: #ffffff;
-        }
-
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 0 40px;
-        }
-
-        /* HERO SECTION */
-        .hero {
-            padding: 60px 0 80px;
-            text-align: center;
-            border-bottom: 2px solid #1f1f1f;
-        }
-
-        .hero h1 {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 72px;
-            font-weight: 700;
-            letter-spacing: -1px;
-            margin-bottom: 20px;
-            line-height: 1.2;
-            color: #1f1f1f;
-        }
-
-        .hero .subtitle {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 14px;
-            font-weight: 600;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            color: #666;
-            margin-bottom: 40px;
-        }
-
-        .hero p {
-            font-size: 18px;
-            line-height: 1.9;
-            color: #333;
-            max-width: 700px;
-            margin: 0 auto 50px;
-        }
-
-        .cta-button {
-            display: inline-block;
-            background-color: #1f1f1f;
-            color: #ffffff;
-            padding: 16px 48px;
-            font-family: 'Montserrat', sans-serif;
-            font-size: 14px;
-            font-weight: 600;
-            text-decoration: none;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            border: 2px solid #1f1f1f;
-            transition: all 0.3s ease;
-            cursor: pointer;
-        }
-
-        .cta-button:hover {
-            background-color: #ffffff;
-            color: #1f1f1f;
-        }
-
-        /* SECTION SPACING */
-        section {
-            padding: 60px 0;
-            border-bottom: 1px solid #e5e5e5;
-        }
-
-        section:last-of-type {
-            border-bottom: none;
-        }
-
-        section h2 {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 48px;
-            font-weight: 700;
-            margin-bottom: 50px;
-            color: #1f1f1f;
-            line-height: 1.3;
-        }
-
-        /* THE WORK SECTION */
-        .work-intro {
-            margin-bottom: 60px;
-        }
-
-        .work-intro p {
-            font-size: 18px;
-            line-height: 1.9;
-            margin-bottom: 25px;
-            color: #333;
-        }
-
-        .principle-box {
-            background-color: #f5f5f5;
-            padding: 40px;
-            margin: 40px 0;
-            border-left: 4px solid #1f1f1f;
-            font-size: 16px;
-            line-height: 1.9;
-            font-style: italic;
-        }
-
-        /* SERVICE CARDS */
-        .services {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 40px;
-            margin-bottom: 60px;
-        }
-
-        .service-card {
-            border: 1px solid #d5d5d5;
-            padding: 40px;
-            transition: all 0.3s ease;
-        }
-
-        .service-card:hover {
-            border-color: #1f1f1f;
-            background-color: #f9f9f9;
-        }
-
-        .service-card h3 {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 24px;
-            font-weight: 600;
-            margin-bottom: 20px;
-            color: #1f1f1f;
-        }
-
-        .service-card p {
-            font-size: 16px;
-            line-height: 1.8;
-            color: #444;
-            margin-bottom: 20px;
-        }
-
-        .service-tag {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 12px;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            color: #888;
-        }
-
-        /* FRAMEWORKS SECTION */
-        .frameworks-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 60px;
-        }
-
-        .framework {
-            margin-bottom: 45px;
-            padding-bottom: 45px;
-            border-bottom: 1px solid #e5e5e5;
-        }
-
-        .framework:last-child {
-            border-bottom: none;
-            margin-bottom: 0;
-            padding-bottom: 0;
-        }
-
-        .framework-name {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 22px;
-            font-weight: 700;
-            color: #1f1f1f;
-            margin-bottom: 12px;
-        }
-
-        .framework-equation {
-            font-family: 'Jost', sans-serif;
-            font-size: 18px;
-            font-weight: 600;
-            color: #1f1f1f;
-            letter-spacing: 0.5px;
-        }
-
-        /* EXPLORE SECTION */
-        .explore-list {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px 40px;
-            margin-bottom: 40px;
-        }
-
-        .explore-item {
-            padding-left: 24px;
-            position: relative;
-            font-size: 16px;
-            line-height: 1.8;
-            color: #333;
-        }
-
-        .explore-item::before {
-            content: "◦";
-            position: absolute;
-            left: 0;
-            font-size: 20px;
-            color: #1f1f1f;
-        }
-
-        .explore-emphasis {
-            font-style: italic;
-            color: #1f1f1f;
-            font-weight: 500;
-        }
-
-        /* WHO IT'S FOR */
-        .audience-list {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 15px 30px;
-        }
-
-        .audience-item {
-            padding-left: 24px;
-            position: relative;
-            font-size: 16px;
-            line-height: 1.7;
-            color: #333;
-        }
-
-        .audience-item::before {
-            content: "◦";
-            position: absolute;
-            left: 0;
-            font-size: 20px;
-            color: #1f1f1f;
-        }
-
-        /* ABOUT SECTION */
-        .about-text {
-            font-size: 18px;
-            line-height: 1.9;
-            color: #333;
-            margin-bottom: 25px;
-        }
-
-        .about-philosophy {
-            background-color: #f5f5f5;
-            padding: 40px;
-            margin: 40px 0;
-            border-left: 4px solid #1f1f1f;
-            font-size: 16px;
-            line-height: 1.9;
-            font-style: italic;
-        }
-
-        /* FINAL CTA */
-        .final-cta {
-            text-align: center;
-            padding: 60px 0;
-        }
-
-        .final-cta h3 {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 36px;
-            font-weight: 600;
-            margin-bottom: 20px;
-            color: #1f1f1f;
-        }
-
-        .final-cta p {
-            font-size: 18px;
-            line-height: 1.8;
-            color: #444;
-            margin-bottom: 40px;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        /* RESPONSIVE */
-        @media (max-width: 768px) {
-            .container {
-                padding: 0 24px;
-            }
-
-            .hero {
-                padding: 60px 0 80px;
-            }
-
-            .hero h1 {
-                font-size: 48px;
-            }
-
-            .services {
-                grid-template-columns: 1fr;
-                gap: 30px;
-            }
-
-            .explore-list,
-            .audience-list {
-                grid-template-columns: 1fr;
-            }
-
-            .frameworks-grid {
-                grid-template-columns: 1fr;
-                gap: 40px;
-            }
-
-            section {
-                padding: 40px 0;
-            }
-
-            section h2 {
-                font-size: 36px;
-            }
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Beyond the Post&trade; | Frenetta Tate Global</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--charcoal:#1F1F1F;--ivory:#F5F2ED;--gold:#C2A46D;--taupe:#D9D4CC;--olive:#4A5A4D;--c80:rgba(31,31,31,.80)}
+body{font-family:'Jost',sans-serif;background:var(--ivory);color:var(--charcoal);margin:0}
+.site-nav{position:fixed;top:0;left:0;right:0;z-index:1000;display:flex;align-items:center;justify-content:space-between;padding:.85rem 3rem;background:rgba(245,242,237,.98);backdrop-filter:blur(14px);border-bottom:1px solid var(--taupe)}
+.nav-links{display:flex;align-items:center;gap:2rem;list-style:none;margin:0;padding:0}
+.page-content{padding-top:80px}
+.lbl{font-size:.72rem;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:1rem}
+.h-section{font-family:'Cormorant Garamond',serif;font-size:clamp(1.8rem,3.5vw,2.8rem);font-weight:500;line-height:1.15}
+.body-lg{font-size:1.05rem;font-weight:300;line-height:1.85;color:var(--c80)}
+.stmt{font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:400;line-height:1.5}
+.gold-italic{font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--gold);font-size:1.15rem;line-height:1.7}
+.section{padding:3.5rem 4rem}
+.section-inner{max-width:1100px;margin:0 auto}
+.narrow{max-width:820px;margin:0 auto}
+.light{color:rgba(245,242,237,.85)}
+.btn-p{display:inline-block;background:var(--gold);color:var(--charcoal);padding:.9rem 2.5rem;font-size:.72rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;border:none;cursor:pointer;transition:all .3s}
+.btn-p:hover{background:var(--charcoal);color:var(--gold)}
+.btn-iv{display:inline-block;background:transparent;color:var(--ivory);border:1px solid rgba(245,242,237,.4);padding:.9rem 2.5rem;font-size:.72rem;font-weight:500;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;cursor:pointer;transition:all .3s}
+.btn-iv:hover{border-color:var(--gold);color:var(--gold)}
+.site-footer{background:rgba(245,242,237,.98);border-top:1px solid var(--taupe);padding:.85rem 3rem}
+.footer-inner{display:flex;align-items:center;justify-content:space-between;max-width:1200px;margin:0 auto}
+.footer-links{display:flex;align-items:center;gap:2rem;list-style:none;margin:0;padding:0}
+.footer-copy{max-width:1200px;margin:.75rem auto 0;border-top:1px solid var(--taupe);padding-top:.75rem;text-align:center;font-size:.72rem;color:var(--c80);letter-spacing:.05em}
+@media(max-width:768px){
+  .site-nav{padding:.85rem 1.5rem}
+  .nav-links{display:none}
+  .section{padding:2.5rem 1.5rem}
+  .site-footer{padding:.85rem 1.5rem}
+}
+</style>
+<meta name="description" content="Beyond the Post: A Manifesto for Professional Stewardship. A call to participate more intentionally in the professional communities that shape us.">
+<link rel="canonical" href="https://frenettatate.com/beyond-the-post/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Frenetta Tate Global">
+<meta property="og:title" content="Beyond the Post™ | Frenetta Tate Global">
+<meta property="og:description" content="Beyond the Post: A Manifesto for Professional Stewardship. A call to participate more intentionally in the professional communities that shape us.">
+<meta property="og:url" content="https://frenettatate.com/beyond-the-post/">
+<meta name="twitter:card" content="summary">
+<script type="application/ld+json">{"@type": "ProfessionalService", "@id": "https://frenettatate.com/#organization", "name": "Frenetta Tate Global LLC", "url": "https://frenettatate.com/", "telephone": "+1-346-229-9157", "email": "frenetta@frenettatate.com", "address": {"@type": "PostalAddress", "addressLocality": "Houston", "addressRegion": "TX", "addressCountry": "US"}, "founder": {"@type": "Person", "name": "Frenetta Tate", "jobTitle": "Founder & Principal Consultant"}, "@context": "https://schema.org"}</script>
 </head>
 <body>
-    <div class="container">
-        <!-- HERO -->
-        <section class="hero">
-            <h1>Beyond the Post</h1>
-            <p class="subtitle">A Manifesto for Professional Stewardship™</p>
-            <p>What happens when we stop thinking only about how we show up professionally and begin thinking about what our presence contributes to the communities around us?</p>
-            <a href="https://form.jotform.com/262397246717063" class="cta-button">Start the Conversation</a>
-        </section>
 
-        <!-- THE WORK BEHIND THE CONVERSATION -->
-        <section>
-            <h2>The Work Behind the Conversation</h2>
-            <div class="work-intro">
-                <p>Professional culture is not created only through policies, programs, or leadership initiatives.</p>
-                <p>It is also created in meetings. In conversations. In the questions people are willing to ask. In how disagreement is handled. In whether knowledge is generously shared. In whether people participate merely to be seen or because they have something meaningful to contribute.</p>
-                <p>Professional Stewardship™ gives organizations language and frameworks for examining those everyday choices more intentionally.</p>
-                <p>At its heart is a simple principle:</p>
-                <div class="principle-box">
-                    "Professional stewardship is the intentional practice of strengthening the communities that strengthen us."
-                </div>
-            </div>
-        </section>
+<!-- NAV -->
+<nav class="site-nav">
+  <a href="/" style="display:flex;align-items:center;text-decoration:none">
+    <img src="data:image/png;base64,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" alt="Frenetta Tate Global" style="height:56px;width:auto">
+  </a>
+  <ul class="nav-links">
+    <li><a href="/" style="font-size:.72rem;font-weight:500;letter-spacing:.07em;text-transform:uppercase;text-decoration:none;color:var(--c80);transition:color .3s">Home</a></li>
+    <li><a href="/#about" style="font-size:.72rem;font-weight:500;letter-spacing:.07em;text-transform:uppercase;text-decoration:none;color:var(--c80);transition:color .3s">About</a></li>
+    <li><a href="/#work" style="font-size:.72rem;font-weight:500;letter-spacing:.07em;text-transform:uppercase;text-decoration:none;color:var(--c80);transition:color .3s">The Work</a></li>
+    <li><a href="/oci" style="font-size:.72rem;font-weight:500;letter-spacing:.07em;text-transform:uppercase;text-decoration:none;color:var(--c80);transition:color .3s">Operational Clarity Intensive</a></li>
+    <li><a href="/Leadership-audit" style="font-size:.72rem;font-weight:500;letter-spacing:.07em;text-transform:uppercase;text-decoration:none;color:var(--c80);transition:color .3s">Leadership Audit</a></li>
+    <li><a href="https://frenettatate-droid.github.io/LIP/" target="_blank" style="font-size:.72rem;font-weight:500;letter-spacing:.07em;text-transform:uppercase;text-decoration:none;color:var(--c80);transition:color .3s">Blog</a></li>
+    <li><a href="/#contact" style="font-size:.72rem;font-weight:500;letter-spacing:.07em;text-transform:uppercase;text-decoration:none;color:var(--charcoal);border:1px solid var(--charcoal);padding:.4rem 1.25rem;display:inline-block;transition:all .3s">Work With Frenetta</a></li>
+  </ul>
+</nav>
 
-        <!-- BRING THE WORK IN -->
-        <section>
-            <h2>Bring the Work In</h2>
-            <div class="services">
-                <div class="service-card">
-                    <h3>Keynotes & Conference Sessions</h3>
-                    <p>A thought-provoking introduction to the ideas behind Beyond the Post™ and Professional Stewardship™.</p>
-                    <p>Sessions explore the responsibility that comes with having a professional voice, the difference between visibility and value, meaningful contribution, credibility, trust, and the role each of us plays in shaping professional culture.</p>
-                    <p class="service-tag">Ideal for: Conferences, leadership gatherings, employee events, professional associations, retreats</p>
-                </div>
+<div class="page-content">
 
-                <div class="service-card">
-                    <h3>Professional Stewardship™ Workshops</h3>
-                    <p>Move beyond the ideas and put them into practice.</p>
-                    <p>Interactive workshops use frameworks, equations, Reality Checks™, and reflection questions to help participants examine how they communicate, contribute, build credibility, create connection, and strengthen the communities around them.</p>
-                    <p class="service-tag">Ideal for: Leadership development, professional development, team learning, employee engagement</p>
-                </div>
-
-                <div class="service-card">
-                    <h3>Leadership & Team Experiences</h3>
-                    <p>Sometimes an organization does not need another presentation. It needs a better conversation.</p>
-                    <p>These facilitated experiences create space for leadership teams and employee groups to examine the behaviors, assumptions, communication patterns, and everyday interactions shaping their shared environment.</p>
-                    <p class="service-tag">Ideal for: Leadership teams, employee groups, culture-building initiatives</p>
-                </div>
-
-                <div class="service-card">
-                    <h3>Book + Conversation Experiences</h3>
-                    <p>Give participants something they can continue carrying after the session ends.</p>
-                    <p>Pair copies of Beyond the Post™ with a keynote, workshop, facilitated discussion, or leadership conversation to create a shared learning experience around Professional Stewardship™.</p>
-                    <p class="service-tag">Ideal for: Leadership cohorts, conferences, retreats, professional associations</p>
-                </div>
-
-                <div class="service-card">
-                    <h3>Organizational Advisory & Consulting</h3>
-                    <p>For organizations ready to go deeper, Frenetta Tate Global provides advisory and consulting support.</p>
-                    <p>Focus areas include organizational clarity, alignment, workplace experience, operational effectiveness, and the systems that shape how people experience work.</p>
-                    <p class="service-tag">Beyond the conversation — examining what the organization itself may need</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- WHAT PARTICIPANTS WILL EXPLORE -->
-        <section>
-            <h2>What Participants Will Explore</h2>
-            <p style="font-size: 18px; line-height: 1.9; margin-bottom: 50px; color: #333;">The work is designed to create thought and conversation, not prescribe a single way of thinking. Participants may explore:</p>
-            <div class="explore-list">
-                <div class="explore-item">The difference between participation and meaningful contribution</div>
-                <div class="explore-item">Why visibility and influence are not the same</div>
-                <div class="explore-item">How curiosity and humility strengthen professional credibility</div>
-                <div class="explore-item">The relationship between consistency and trust</div>
-                <div class="explore-item">How everyday conversations influence professional culture</div>
-                <div class="explore-item">What meaningful discourse requires from all participants</div>
-                <div class="explore-item">How stronger professional connections are built</div>
-                <div class="explore-item">What it means to practice Professional Stewardship™</div>
-                <div class="explore-item">The responsibility each person carries for the communities they help shape</div>
-            </div>
-            <p style="font-size: 18px; line-height: 1.9; margin-top: 50px; color: #333;">And perhaps most importantly:</p>
-            <p class="explore-emphasis" style="font-size: 18px; margin-top: 20px;">"What does this community need that we are uniquely positioned to offer?"</p>
-        </section>
-
-        <!-- THE IDEAS BECOME TOOLS -->
-        <section>
-            <h2>The Ideas Become Tools</h2>
-            <p style="font-size: 18px; line-height: 1.9; margin-bottom: 60px; color: #333;">Beyond the Post™ introduces memorable frameworks and equations that give participants language they can continue using long after the experience.</p>
-
-            <div class="frameworks-grid">
-                <div>
-                    <div class="framework">
-                        <div class="framework-name">The Community Equation™</div>
-                        <div class="framework-equation">People × Participation = Community</div>
-                    </div>
-
-                    <div class="framework">
-                        <div class="framework-name">The Visibility Equation™</div>
-                        <div class="framework-equation">Visibility − Value = Noise</div>
-                    </div>
-
-                    <div class="framework">
-                        <div class="framework-name">The Credibility Equation™</div>
-                        <div class="framework-equation">Curiosity + Humility = Credibility</div>
-                    </div>
-                </div>
-
-                <div>
-                    <div class="framework">
-                        <div class="framework-name">The Contribution Equation™</div>
-                        <div class="framework-equation">Intention + Generosity = Contribution</div>
-                    </div>
-
-                    <div class="framework">
-                        <div class="framework-name">The Stewardship Equation™</div>
-                        <div class="framework-equation">Contribution × Consistency = Trust</div>
-                    </div>
-
-                    <div class="framework">
-                        <div class="framework-name">The Legacy Equation™</div>
-                        <div class="framework-equation">Contribution × Time = Legacy</div>
-                    </div>
-                </div>
-            </div>
-
-            <p style="font-size: 16px; line-height: 1.8; margin-top: 60px; color: #333; font-style: italic;">These ideas are not intended to remain on a presentation slide. They are designed to become conversation starters, reflection tools, and shared language organizations can carry forward.</p>
-        </section>
-
-        <!-- WHO THIS WORK IS FOR -->
-        <section>
-            <h2>Who This Work Is For</h2>
-            <p style="font-size: 18px; line-height: 1.9; margin-bottom: 50px; color: #333;">Beyond the Post™ experiences can be adapted for:</p>
-            <div class="audience-list">
-                <div class="audience-item">Corporations and businesses</div>
-                <div class="audience-item">Leadership teams</div>
-                <div class="audience-item">Professional associations</div>
-                <div class="audience-item">Conferences and summits</div>
-                <div class="audience-item">Government and public-sector organizations</div>
-                <div class="audience-item">Nonprofit organizations</div>
-                <div class="audience-item">Healthcare organizations</div>
-                <div class="audience-item">Educational institutions</div>
-                <div class="audience-item">Employee and professional development programs</div>
-                <div class="audience-item">Women's leadership communities</div>
-                <div class="audience-item">Employee resource and affinity groups</div>
-            </div>
-            <p style="font-size: 18px; line-height: 1.9; margin-top: 50px; color: #333; font-style: italic;">The common denominator is simple: people who want the professional communities they influence to be stronger because they participated.</p>
-        </section>
-
-        <!-- ABOUT FRENETTA TATE -->
-        <section>
-            <h2>About Frenetta Tate</h2>
-            <p class="about-text">Frenetta Tate is an organizational clarity strategist, leadership advisor, author, and founder of Frenetta Tate Global.</p>
-            <p class="about-text">With more than 15 years of experience across enterprise operations, workplace experience, organizational governance, executive partnership, and employee engagement, her work examines an often-overlooked dimension of organizational life: the systems, behaviors, decisions, and everyday interactions through which people actually experience an organization.</p>
-            <div class="about-philosophy">
-                "Employees experience leadership through systems long before they experience leadership through people."
-            </div>
-            <p class="about-text">Through her writing, advisory work, frameworks, and facilitated conversations, Frenetta helps leaders and organizations bring greater intention to what they are building and what people experience because of it.</p>
-            <p class="about-text">She is the author of Beyond the Post™: A Manifesto for Professional Stewardship™.</p>
-        </section>
-
-        <!-- FINAL CTA -->
-        <section class="final-cta">
-            <h3>Start the Conversation</h3>
-            <p>You do not need to know exactly which experience you need before reaching out. Tell us about your organization, your audience, and what you hope to accomplish. From there, we can determine the right fit.</p>
-            <a href="https://form.jotform.com/262397246717063" class="cta-button">Bring the Conversation Into Your Organization</a>
-        </section>
+  <!-- HERO -->
+  <div style="background:var(--charcoal);padding:7rem 4rem 5rem;border-bottom:3px solid var(--gold)">
+    <div style="max-width:820px">
+      <span class="lbl">A Manifesto for Professional Stewardship&trade;</span>
+      <h1 style="font-family:'Cormorant Garamond',serif;font-size:clamp(3rem,7vw,5.5rem);font-weight:500;color:var(--ivory);line-height:1.0;margin-bottom:.25rem">Beyond</h1>
+      <h1 style="font-family:'Cormorant Garamond',serif;font-size:clamp(3rem,7vw,5.5rem);font-weight:500;font-style:italic;color:var(--gold);line-height:1.0;margin-bottom:2rem">the Post.</h1>
+      <p style="font-size:1.1rem;font-weight:300;color:rgba(245,242,237,.75);max-width:580px;line-height:1.85;margin-bottom:2.5rem">Most professionals are active in their communities. Fewer are intentional about them. This book is a call to move beyond participation &mdash; into professional stewardship.</p>
+      <div style="display:flex;gap:1.25rem;flex-wrap:wrap">
+        <a href="#bring-it-in" class="btn-p">Bring This Into Your Organization</a>
+        <a href="#book" class="btn-iv">About the Book</a>
+      </div>
     </div>
+  </div>
+
+  <!-- THE DEFINING STATEMENT -->
+  <div class="section" style="background:var(--taupe)">
+    <div class="narrow" style="text-align:center">
+      <span class="lbl">The Foundation</span>
+      <p style="font-family:'Cormorant Garamond',serif;font-size:clamp(1.4rem,3vw,2rem);font-weight:400;font-style:italic;color:var(--charcoal);line-height:1.6;margin-bottom:2rem">&ldquo;Professional stewardship is the intentional practice of strengthening the communities that strengthen us.&rdquo;</p>
+      <div style="width:56px;height:2px;background:var(--gold);margin:0 auto 2rem"></div>
+      <p class="body-lg">The professional world is full of people who post, connect, attend, and engage. But engagement without intention is just activity. Beyond the Post&trade; challenges leaders and professionals to think differently about their role in the communities they belong to &mdash; and to show up in ways that actually strengthen them.</p>
+    </div>
+  </div>
+
+  <!-- ABOUT THE BOOK -->
+  <div class="section" id="book" style="background:var(--charcoal)">
+    <div class="section-inner">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start">
+        <div>
+          <span class="lbl">The Book</span>
+          <h2 class="h-section light" style="margin-bottom:1.5rem">A manifesto is not a manual.<br><em style="font-style:italic;color:var(--gold)">It is a declaration.</em></h2>
+          <p class="body-lg light" style="margin-bottom:1.25rem">Beyond the Post&trade; is a 78-page manifesto written for professionals who care about more than presence. It is for the ones who want the communities they influence to be stronger because they participated.</p>
+          <p class="body-lg light" style="margin-bottom:1.25rem">Across six chapters, it explores what it actually means to contribute, to show up with credibility, to build trust through consistency, and to think about the legacy your professional participation is creating &mdash; one conversation at a time.</p>
+          <p class="gold-italic">Every professional influences the culture of their community. The question is whether that influence is intentional.</p>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:1rem">
+          <div style="background:rgba(245,242,237,.05);border-left:3px solid var(--gold);padding:1.5rem">
+            <p style="font-size:.72rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:.75rem">What the Book Covers</p>
+            <div style="display:flex;flex-direction:column;gap:.6rem">
+              <p style="font-size:.9rem;font-weight:300;color:rgba(245,242,237,.75)">◦ &nbsp;Participation vs. meaningful contribution</p>
+              <p style="font-size:.9rem;font-weight:300;color:rgba(245,242,237,.75)">◦ &nbsp;Visibility vs. real influence</p>
+              <p style="font-size:.9rem;font-weight:300;color:rgba(245,242,237,.75)">◦ &nbsp;Curiosity and humility as the foundation of credibility</p>
+              <p style="font-size:.9rem;font-weight:300;color:rgba(245,242,237,.75)">◦ &nbsp;Consistency and the building of trust</p>
+              <p style="font-size:.9rem;font-weight:300;color:rgba(245,242,237,.75)">◦ &nbsp;How everyday conversations shape professional culture</p>
+              <p style="font-size:.9rem;font-weight:300;color:rgba(245,242,237,.75)">◦ &nbsp;Personal responsibility for the communities we belong to</p>
+              <p style="font-size:.9rem;font-weight:300;color:rgba(245,242,237,.75)">◦ &nbsp;The legacy your professional participation is building right now</p>
+            </div>
+          </div>
+          <div style="background:rgba(245,242,237,.05);border-left:3px solid var(--gold);padding:1.5rem">
+            <p style="font-size:.72rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:.75rem">The Four Commitments</p>
+            <p style="font-size:.9rem;font-weight:300;color:rgba(245,242,237,.75);line-height:1.7">Intentional Contribution &nbsp;&middot;&nbsp; Meaningful Discourse &nbsp;&middot;&nbsp; Stronger Connections &nbsp;&middot;&nbsp; Lasting Stewardship</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- THE SIX EQUATIONS -->
+  <div class="section" style="background:var(--ivory)">
+    <div class="section-inner">
+      <div style="text-align:center;margin-bottom:3rem">
+        <span class="lbl">The Framework</span>
+        <h2 class="h-section" style="margin-bottom:1rem">Six equations.<br><em style="font-style:italic;color:var(--gold)">One foundation.</em></h2>
+        <p class="body-lg" style="max-width:580px;margin:0 auto">Each chapter of Beyond the Post&trade; is anchored in a framework equation that defines how professional stewardship is built &mdash; one principle at a time.</p>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem">
+        <div style="border-top:2px solid var(--gold);padding:2rem;background:var(--taupe)">
+          <p style="font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-style:italic;color:var(--gold);margin-bottom:.75rem">Community Equation&trade;</p>
+          <p style="font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:500;color:var(--charcoal);margin-bottom:.75rem">People &times; Participation<br>= Community</p>
+          <p style="font-size:.85rem;font-weight:300;color:var(--c80);line-height:1.65">Community is not a platform or a place. It is the product of people who choose to show up for one another.</p>
+        </div>
+        <div style="border-top:2px solid var(--gold);padding:2rem;background:var(--taupe)">
+          <p style="font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-style:italic;color:var(--gold);margin-bottom:.75rem">Visibility Equation&trade;</p>
+          <p style="font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:500;color:var(--charcoal);margin-bottom:.75rem">Visibility &minus; Value<br>= Noise</p>
+          <p style="font-size:.85rem;font-weight:300;color:var(--c80);line-height:1.65">Being seen without adding value is just occupying space. Influence is earned through contribution.</p>
+        </div>
+        <div style="border-top:2px solid var(--gold);padding:2rem;background:var(--taupe)">
+          <p style="font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-style:italic;color:var(--gold);margin-bottom:.75rem">Credibility Equation&trade;</p>
+          <p style="font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:500;color:var(--charcoal);margin-bottom:.75rem">Curiosity + Humility<br>= Credibility</p>
+          <p style="font-size:.85rem;font-weight:300;color:var(--c80);line-height:1.65">Credibility is not claimed. It is built by the leader who keeps asking questions and stays willing to be wrong.</p>
+        </div>
+        <div style="border-top:2px solid var(--gold);padding:2rem;background:var(--taupe)">
+          <p style="font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-style:italic;color:var(--gold);margin-bottom:.75rem">Contribution Equation&trade;</p>
+          <p style="font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:500;color:var(--charcoal);margin-bottom:.75rem">Intention + Generosity<br>= Contribution</p>
+          <p style="font-size:.85rem;font-weight:300;color:var(--c80);line-height:1.65">Meaningful contribution begins with intention. Generosity is what makes it land.</p>
+        </div>
+        <div style="border-top:2px solid var(--gold);padding:2rem;background:var(--taupe)">
+          <p style="font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-style:italic;color:var(--gold);margin-bottom:.75rem">Stewardship Equation&trade;</p>
+          <p style="font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:500;color:var(--charcoal);margin-bottom:.75rem">Contribution &times; Consistency<br>= Trust</p>
+          <p style="font-size:.85rem;font-weight:300;color:var(--c80);line-height:1.65">Trust is not built in a moment. It is the result of consistent contribution over time.</p>
+        </div>
+        <div style="border-top:2px solid var(--gold);padding:2rem;background:var(--taupe)">
+          <p style="font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-style:italic;color:var(--gold);margin-bottom:.75rem">Legacy Equation&trade;</p>
+          <p style="font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:500;color:var(--charcoal);margin-bottom:.75rem">Contribution &times; Time<br>= Legacy</p>
+          <p style="font-size:.85rem;font-weight:300;color:var(--c80);line-height:1.65">Legacy is not something you plan. It is what accumulates when you keep showing up and contributing with intention.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- WHO IT IS FOR -->
+  <div class="section" style="background:var(--charcoal)">
+    <div class="section-inner">
+      <div style="text-align:center;margin-bottom:3rem">
+        <span class="lbl">Who This Is For</span>
+        <h2 class="h-section light" style="margin-bottom:1rem">One common denominator &mdash;<br><em style="font-style:italic;color:var(--gold)">people who want to leave things better.</em></h2>
+        <p class="body-lg light" style="max-width:580px;margin:0 auto">Beyond the Post&trade; is for professionals who want the communities they influence to be stronger because they participated.</p>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1rem">
+        <div style="padding:1.25rem 1.5rem;border:1px solid rgba(194,164,109,.2);font-size:.9rem;font-weight:300;color:rgba(245,242,237,.75)">Corporations &amp; Leadership Teams</div>
+        <div style="padding:1.25rem 1.5rem;border:1px solid rgba(194,164,109,.2);font-size:.9rem;font-weight:300;color:rgba(245,242,237,.75)">Professional Associations &amp; Conferences</div>
+        <div style="padding:1.25rem 1.5rem;border:1px solid rgba(194,164,109,.2);font-size:.9rem;font-weight:300;color:rgba(245,242,237,.75)">Government &amp; Public Sector</div>
+        <div style="padding:1.25rem 1.5rem;border:1px solid rgba(194,164,109,.2);font-size:.9rem;font-weight:300;color:rgba(245,242,237,.75)">Nonprofits &amp; Healthcare</div>
+        <div style="padding:1.25rem 1.5rem;border:1px solid rgba(194,164,109,.2);font-size:.9rem;font-weight:300;color:rgba(245,242,237,.75)">Educational Institutions</div>
+        <div style="padding:1.25rem 1.5rem;border:1px solid rgba(194,164,109,.2);font-size:.9rem;font-weight:300;color:rgba(245,242,237,.75)">Employee Development Programs</div>
+        <div style="padding:1.25rem 1.5rem;border:1px solid rgba(194,164,109,.2);font-size:.9rem;font-weight:300;color:rgba(245,242,237,.75)">Women&rsquo;s Leadership Communities</div>
+        <div style="padding:1.25rem 1.5rem;border:1px solid rgba(194,164,109,.2);font-size:.9rem;font-weight:300;color:rgba(245,242,237,.75)">ERG &amp; Affinity Groups</div>
+        <div style="padding:1.25rem 1.5rem;border:1px solid rgba(194,164,109,.2);font-size:.9rem;font-weight:300;color:rgba(245,242,237,.75)">Any professional who cares about legacy</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- BRING IT INTO YOUR ORGANIZATION -->
+  <div class="section" id="bring-it-in" style="background:var(--taupe)">
+    <div class="section-inner">
+      <div style="text-align:center;margin-bottom:3rem">
+        <span class="lbl">Beyond the Book</span>
+        <h2 class="h-section" style="margin-bottom:1rem">Bring this work into your organization.</h2>
+        <p class="body-lg" style="max-width:600px;margin:0 auto">Beyond the Post&trade; is available as a keynote, workshop, facilitated team experience, and organizational advisory engagement. Every experience is grounded in the Professional Stewardship&trade; framework.</p>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:1.5rem">
+        <div style="background:var(--ivory);border-top:2px solid var(--gold);padding:2rem">
+          <h3 style="font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-weight:600;margin-bottom:.75rem">Keynotes &amp; Conference Sessions</h3>
+          <p style="font-size:.9rem;font-weight:300;color:var(--c80);line-height:1.7">A high-impact session that challenges audiences to rethink how they show up in the professional communities they belong to &mdash; and what it would mean to show up with intention.</p>
+        </div>
+        <div style="background:var(--ivory);border-top:2px solid var(--gold);padding:2rem">
+          <h3 style="font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-weight:600;margin-bottom:.75rem">Professional Stewardship&trade; Workshops</h3>
+          <p style="font-size:.9rem;font-weight:300;color:var(--c80);line-height:1.7">A structured workshop experience built around the six framework equations &mdash; designed for leadership teams, professional associations, and employee development programs.</p>
+        </div>
+        <div style="background:var(--ivory);border-top:2px solid var(--gold);padding:2rem">
+          <h3 style="font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-weight:600;margin-bottom:.75rem">Leadership &amp; Team Facilitated Experiences</h3>
+          <p style="font-size:.9rem;font-weight:300;color:var(--c80);line-height:1.7">Facilitated team conversations built around the themes of contribution, credibility, trust, and legacy &mdash; designed to strengthen how teams show up for each other and for the communities they serve.</p>
+        </div>
+        <div style="background:var(--ivory);border-top:2px solid var(--gold);padding:2rem">
+          <h3 style="font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-weight:600;margin-bottom:.75rem">Book + Conversation Pairings</h3>
+          <p style="font-size:.9rem;font-weight:300;color:var(--c80);line-height:1.7">A structured organizational reading experience that pairs the manifesto with a facilitated discussion &mdash; ideal for book clubs, leadership cohorts, and professional development programs.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CLOSER -->
+  <div class="section" style="background:var(--olive);text-align:center">
+    <div class="narrow">
+      <span class="lbl">The Invitation</span>
+      <h2 class="h-section light" style="margin-bottom:1.25rem">The communities you belong to<br><em style="font-style:italic;color:var(--gold)">are shaped by how you show up.</em></h2>
+      <p class="body-lg light" style="max-width:540px;margin:0 auto 2.5rem">The question is not whether you are participating. The question is whether your participation is making the community stronger.</p>
+      <a href="/#contact" class="btn-p">Let&rsquo;s Start the Conversation</a>
+    </div>
+  </div>
+
+</div>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <a href="/" style="text-decoration:none">
+      <img src="data:image/png;base64,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" alt="Frenetta Tate Global" style="height:44px;width:auto">
+    </a>
+    <ul class="footer-links">
+      <li><a href="/" style="font-size:.72rem;font-weight:500;letter-spacing:.07em;text-transform:uppercase;text-decoration:none;color:var(--c80);transition:color .3s">Home</a></li>
+      <li><a href="/#about" style="font-size:.72rem;font-weight:500;letter-spacing:.07em;text-transform:uppercase;text-decoration:none;color:var(--c80);transition:color .3s">About</a></li>
+      <li><a href="/#work" style="font-size:.72rem;font-weight:500;letter-spacing:.07em;text-transform:uppercase;text-decoration:none;color:var(--c80);transition:color .3s">The Work</a></li>
+      <li><a href="/oci" style="font-size:.72rem;font-weight:500;letter-spacing:.07em;text-transform:uppercase;text-decoration:none;color:var(--c80);transition:color .3s">Operational Clarity Intensive</a></li>
+      <li><a href="/Leadership-audit" style="font-size:.72rem;font-weight:500;letter-spacing:.07em;text-transform:uppercase;text-decoration:none;color:var(--c80);transition:color .3s">Leadership Audit</a></li>
+      <li><a href="https://frenettatate-droid.github.io/LIP/" target="_blank" style="font-size:.72rem;font-weight:500;letter-spacing:.07em;text-transform:uppercase;text-decoration:none;color:var(--c80);transition:color .3s">Blog</a></li>
+      <li><a href="/#contact" style="font-size:.72rem;font-weight:500;letter-spacing:.07em;text-transform:uppercase;text-decoration:none;color:var(--charcoal);border:1px solid var(--charcoal);padding:.4rem 1.25rem;display:inline-block;transition:all .3s">Work With Frenetta</a></li>
+    </ul>
+  </div>
+  <div class="footer-copy">&copy; 2026 Frenetta Tate Global LLC. All Rights Reserved.</div>
+</footer>
+
 </body>
 </html>
