@@ -210,6 +210,30 @@ nav label { cursor:pointer }
 .page-work > *:first-child,
 .page-contact > *:first-child,
 .page-oci > *:first-child { scroll-margin-top: 65px }
+
+
+/* Dropdown menu */
+.has-sub{position:relative;padding:1.4rem 0;margin:-1.4rem 0}
+.has-sub>a::after{content:" \25BE";font-size:.75em}
+.nav-sub{display:none;position:absolute;top:100%;left:-1.25rem;background:#F5F2ED;border:1px solid #D9D4CC;border-top:2px solid #C2A46D;box-shadow:0 10px 28px rgba(0,0,0,.10);list-style:none;margin:0;padding:.5rem 0;min-width:310px;z-index:1200}
+.has-sub:hover .nav-sub,.has-sub:focus-within .nav-sub{display:block}
+.nav-sub li{display:block;margin:0;padding:0}
+.nav-sub a{display:block!important;padding:.7rem 1.4rem!important;white-space:nowrap}
+.nav-sub a:hover{color:#C2A46D!important}
+@media(max-width:1150px){.nav-links,.oci-nav-links{gap:1rem!important}.nav-links a,.oci-nav-links a{font-size:.64rem!important;letter-spacing:.04em!important;white-space:nowrap}}
+@media(max-width:820px){nav,.site-nav,.oci-nav{padding-left:.75rem!important;padding-right:.75rem!important}.nav-links,.oci-nav-links{gap:.55rem!important;margin-left:.5rem!important}.nav-links a,.oci-nav-links a{font-size:.52rem!important;letter-spacing:.02em!important}.nav-sub{display:none!important}.has-sub>a::after{content:""}nav img,.site-nav img,.oci-nav img{height:34px!important}}
+.footer-links,.oci-footer .oci-nav-links{flex-wrap:wrap;justify-content:center}
+
+/* Mobile menu: logo on top, links wrap below */
+@media(max-width:820px){
+nav,.site-nav,.oci-nav{flex-direction:column!important;align-items:center!important;gap:.4rem!important;padding-top:.5rem!important;padding-bottom:.55rem!important}
+.nav-links,.oci-nav-links{display:flex!important;flex-wrap:wrap!important;justify-content:center!important;gap:.35rem .9rem!important;margin:0!important;padding:0!important;list-style:none}
+.nav-links a,.oci-nav-links a{font-size:.6rem!important;letter-spacing:.05em!important}
+.nav-links a[href="/#contact"],.oci-nav-cta{padding:.3rem .8rem!important}
+.nav-ham{display:none!important}
+.nav-sub{display:none!important}.has-sub{padding:0;margin:0}.has-sub>a::after{content:""}
+body{padding-top:62px}
+}
 </style>
 <style>
 /* Standalone OCI overrides */
@@ -281,9 +305,9 @@ body { margin:0; padding:0; background:var(--ivory); }
   <ul class="oci-nav-links">
     <li><a href="/" class="oci-nav-lbl">Home</a></li>
     <li><a href="/about/" class="oci-nav-lbl">About</a></li>
-    <li><a href="/the-work/" class="oci-nav-lbl">The Work</a></li>
-    <li><a href="https://frenettatate.wixstudio.com/freegift" target="_blank" class="oci-nav-lbl">Leadership Audit</a></li>
-    <li><a href="https://frenettatate-droid.github.io/LIP/" target="_blank" class="oci-nav-lbl">Blog</a></li>
+    <li class="has-sub"><a href="/the-work/" class="oci-nav-lbl">The Work</a><ul class="nav-sub"><li><a href="/oci/" class="oci-nav-lbl">Operational Clarity Intensive</a></li><li><a href="/executive-support/" class="oci-nav-lbl">Executive &amp; Entrepreneur Support</a></li><li><a href="/beyond-the-post/" class="oci-nav-lbl">Beyond the Post</a></li><li><a href="/frenetta-tized/" class="oci-nav-lbl">Get Frenetta-Tized!</a></li></ul></li>
+    <li><a href="/government-contracting/" class="oci-nav-lbl">Government Contracting</a></li>
+    <li><a href="/free-tools/" class="oci-nav-lbl">Free Tools</a></li>
     <li><a href="/#contact" class="oci-nav-cta">Work With Frenetta</a></li>
   </ul>
 </nav>
@@ -294,7 +318,7 @@ body { margin:0; padding:0; background:var(--ivory); }
   <!-- HERO -->
   <div style="background:var(--charcoal);padding:8rem 5rem 4rem;position:relative;border-bottom:3px solid var(--gold);text-align:center">
     <div style="max-width:860px;margin:0 auto">
-      <span class="lbl">90-Minute Executive Diagnostic &middot; Alignara Group</span>
+      <span class="lbl">90-Minute Executive Diagnostic</span>
       <h1 class="h-page" style="color:var(--ivory);margin-bottom:1.25rem">Operational Clarity <em style="font-style:italic;color:var(--gold)">Intensive&trade;</em></h1>
       
     </div>
@@ -467,8 +491,12 @@ body { margin:0; padding:0; background:var(--ivory); }
       <li><a href="/" class="oci-nav-lbl">Home</a></li>
       <li><a href="/about/" class="oci-nav-lbl">About</a></li>
       <li><a href="/the-work/" class="oci-nav-lbl">The Work</a></li>
-      <li><a href="https://frenettatate.wixstudio.com/freegift" target="_blank" class="oci-nav-lbl">Leadership Audit</a></li>
-      <li><a href="https://frenettatate-droid.github.io/LIP/" target="_blank" class="oci-nav-lbl">Blog</a></li>
+      <li><a href="/oci/" class="oci-nav-lbl">Operational Clarity Intensive</a></li>
+      <li><a href="/executive-support/" class="oci-nav-lbl">Executive &amp; Entrepreneur Support</a></li>
+      <li><a href="/beyond-the-post/" class="oci-nav-lbl">Beyond the Post</a></li>
+      <li><a href="/frenetta-tized/" class="oci-nav-lbl">Get Frenetta-Tized!</a></li>
+      <li><a href="/government-contracting/" class="oci-nav-lbl">Government Contracting</a></li>
+      <li><a href="/free-tools/" class="oci-nav-lbl">Free Tools</a></li>
       <li><a href="/#contact" class="oci-nav-cta">Work With Frenetta</a></li>
     </ul>
   </div>
