@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Government Contracting | Frenetta Tate Global</title>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500;1,600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<title>Executive &amp; Entrepreneur Support | Frenetta Tate Global</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{--charcoal:#1F1F1F;--ivory:#F5F2ED;--gold:#C2A46D;--taupe:#D9D4CC;--olive:#4A5A4D;--c80:rgba(31,31,31,.80)}
@@ -12,39 +12,72 @@ body{font-family:'Jost',sans-serif;background:var(--ivory);color:var(--charcoal)
 .site-nav{position:fixed;top:0;left:0;right:0;z-index:1000;display:flex;align-items:center;justify-content:space-between;padding:.85rem 3rem;background:rgba(245,242,237,.98);backdrop-filter:blur(14px);border-bottom:1px solid var(--taupe)}
 .nav-links{display:flex;align-items:center;gap:2rem;list-style:none;margin:0;padding:0}
 .page-content{padding-top:80px}
+
+/* Typography */
 .lbl{font-size:.72rem;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:1rem}
+.h-hero{font-family:'Cormorant Garamond',serif;font-size:clamp(2.8rem,6vw,5rem);font-weight:500;color:var(--ivory);line-height:1.05}
+.h-hero em{font-style:italic;color:var(--gold)}
 .h-section{font-family:'Cormorant Garamond',serif;font-size:clamp(1.8rem,3.5vw,2.8rem);font-weight:500;line-height:1.15}
 .body-lg{font-size:1.05rem;font-weight:300;line-height:1.85;color:var(--c80)}
-.light{color:rgba(245,242,237,.85)}
+.stmt{font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:400;line-height:1.5;color:var(--charcoal)}
+.gold-italic{font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--gold);font-size:1.2rem;line-height:1.6}
+
+/* Sections */
 .section{padding:3.5rem 4rem}
 .section-inner{max-width:1100px;margin:0 auto}
-.narrow{max-width:820px;margin:0 auto}
-.btn-p{display:inline-block;background:var(--gold);color:var(--charcoal);padding:.9rem 2.5rem;font-size:.72rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;border:none;cursor:pointer;transition:all .3s}
-.btn-p:hover{background:var(--ivory)}
-.btn-iv{display:inline-block;background:transparent;color:var(--ivory);border:1px solid rgba(245,242,237,.4);padding:.9rem 2.5rem;font-size:.72rem;font-weight:500;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;transition:all .3s}
+.section-inner.narrow{max-width:820px;margin:0 auto}
+.ivory{background:var(--ivory)}
+.dark{background:var(--charcoal)}
+.taupe{background:var(--taupe)}
+.olive{background:var(--olive)}
+.light{color:rgba(245,242,237,.85)}
+
+/* Hero */
+.hero{background:var(--charcoal);padding:7rem 4rem 4rem;border-bottom:3px solid var(--gold)}
+
+/* Cards */
+.card{background:var(--ivory);border:1px solid var(--taupe);padding:1.75rem}
+.card-dark{background:rgba(245,242,237,.05);border:1px solid rgba(194,164,109,.25);padding:1.75rem}
+
+/* Pricing */
+.price-card{background:var(--ivory);border-top:3px solid var(--gold);padding:2rem}
+.price-card .price{font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:500;color:var(--gold);margin:.5rem 0}
+.price-card .hours{font-size:.8rem;font-weight:400;letter-spacing:.1em;text-transform:uppercase;color:var(--c80);margin-bottom:1rem;display:block}
+
+/* Process */
+.process-row{display:flex;align-items:center;gap:0}
+.process-step{flex:1;text-align:center;padding:1.5rem 1rem;border-right:1px solid rgba(194,164,109,.3)}
+.process-step:last-child{border-right:none}
+.process-arrow{color:var(--gold);font-size:1.2rem;padding:0 .25rem}
+.process-num{font-family:'Cormorant Garamond',serif;font-size:2.5rem;font-weight:500;color:var(--gold);line-height:1;margin-bottom:.4rem}
+
+/* CTA */
+.btn-p{display:inline-block;background:var(--gold);color:var(--charcoal);padding:.9rem 2.5rem;font-size:.72rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;cursor:pointer;border:none;transition:all .3s}
+.btn-p:hover{background:var(--charcoal);color:var(--gold)}
+.btn-iv{display:inline-block;background:transparent;color:var(--ivory);border:1px solid rgba(245,242,237,.4);padding:.9rem 2.5rem;font-size:.72rem;font-weight:500;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;cursor:pointer;transition:all .3s}
 .btn-iv:hover{border-color:var(--gold);color:var(--gold)}
+
+/* Footer */
 .site-footer{background:rgba(245,242,237,.98);border-top:1px solid var(--taupe);padding:.85rem 3rem}
 .footer-inner{display:flex;align-items:center;justify-content:space-between;max-width:1200px;margin:0 auto}
 .footer-links{display:flex;align-items:center;gap:2rem;list-style:none;margin:0;padding:0}
 .footer-copy{max-width:1200px;margin:.75rem auto 0;border-top:1px solid var(--taupe);padding-top:.75rem;text-align:center;font-size:.72rem;color:var(--c80);letter-spacing:.05em}
-.grid-5{display:grid;grid-template-columns:repeat(6,1fr);gap:1rem}
-.uei{grid-column:span 2}
-.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
-.split{display:grid;grid-template-columns:1fr 1.2fr;gap:4rem;align-items:start}
-@media(max-width:900px){.grid-5{grid-template-columns:repeat(2,1fr)}}
+
+/* Bullet list */
+.service-list{list-style:none;display:grid;grid-template-columns:repeat(2,1fr);gap:.75rem 2rem;margin-top:1.25rem}
+.service-list li{font-size:.95rem;font-weight:300;color:rgba(245,242,237,.8);padding-left:1.25rem;position:relative;line-height:1.6}
+.service-list li::before{content:'○';position:absolute;left:0;color:var(--gold);font-size:.7rem;top:.2rem}
+
 @media(max-width:768px){
-  .two-col{grid-template-columns:1fr!important}
   .site-nav{padding:.85rem 1.5rem}
   .nav-links{display:none}
   .section{padding:2.5rem 1.5rem}
-  .grid-3,.grid-5,.split{grid-template-columns:1fr}
-  .uei{grid-column:auto}
-  .split{gap:2rem}
-  .stack-m{grid-template-columns:1fr!important}
-  .stack-m > div{border-right:none!important;border-bottom:1px solid rgba(194,164,109,.2)}
+  .hero{padding:5rem 1.5rem 3rem}
+  .service-list{grid-template-columns:1fr}
+  .process-row{flex-direction:column}
+  .process-step{border-right:none;border-bottom:1px solid rgba(194,164,109,.3)}
+  .process-step:last-child{border-bottom:none}
   .site-footer{padding:.85rem 1.5rem}
-  .footer-inner{flex-direction:column;gap:1rem}
-  .footer-links{flex-wrap:wrap;justify-content:center;gap:1rem}
 }
 
 
@@ -71,21 +104,22 @@ nav,.site-nav,.oci-nav{flex-direction:column!important;align-items:center!import
 body{padding-top:62px}
 }
 </style>
-<meta name="description" content="Frenetta Tate Global LLC is an active SAM.gov registrant. Executive and administrative operations, process documentation, workplace experience support, and project coordination. NAICS 541611, Houston, Texas.">
-<link rel="canonical" href="https://frenettatate.com/government-contracting/">
+<meta name="description" content="Experienced executive and operational support for entrepreneurs, founders, and executives who need help managing the moving pieces, without a full-time hire.">
+<link rel="canonical" href="https://frenettatate.com/executive-support/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Frenetta Tate Global">
-<meta property="og:title" content="Government Contracting | Frenetta Tate Global">
-<meta property="og:description" content="Frenetta Tate Global LLC is an active SAM.gov registrant. Executive and administrative operations, process documentation, workplace experience support, and project coordination. NAICS 541611, Houston, Texas.">
-<meta property="og:url" content="https://frenettatate.com/government-contracting/">
+<meta property="og:title" content="Executive &amp; Entrepreneur Support | Frenetta Tate Global">
+<meta property="og:description" content="Experienced executive and operational support for entrepreneurs, founders, and executives who need help managing the moving pieces, without a full-time hire.">
+<meta property="og:url" content="https://frenettatate.com/executive-support/">
 <meta name="twitter:card" content="summary">
-<script type="application/ld+json">{"@type": "ProfessionalService", "@id": "https://frenettatate.com/#organization", "name": "Frenetta Tate Global LLC", "url": "https://frenettatate.com/", "telephone": "+1-346-229-9157", "email": "frenetta@frenettatate.com", "address": {"@type": "PostalAddress", "addressLocality": "Houston", "addressRegion": "TX", "addressCountry": "US"}, "founder": {"@type": "Person", "name": "Frenetta Tate", "jobTitle": "Founder & Principal Consultant"}, "@context": "https://schema.org", "naics": "541611", "description": "Executive and administrative operations, process documentation, workplace experience support, and project coordination for commercial and government organizations."}</script>
+<script type="application/ld+json">{"@type": "ProfessionalService", "@id": "https://frenettatate.com/#organization", "name": "Frenetta Tate Global LLC", "url": "https://frenettatate.com/", "telephone": "+1-346-229-9157", "email": "frenetta@frenettatate.com", "address": {"@type": "PostalAddress", "addressLocality": "Houston", "addressRegion": "TX", "addressCountry": "US"}, "founder": {"@type": "Person", "name": "Frenetta Tate", "jobTitle": "Founder & Principal Consultant"}, "@context": "https://schema.org"}</script>
 </head>
 <body>
 
+<!-- NAV -->
 <nav class="site-nav">
   <a href="/" style="display:flex;align-items:center;text-decoration:none">
-    <img src="data:image/png;base64,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" alt="Frenetta Tate Global" style="height:56px;width:auto">
+    <img src="data:image/png;base64,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" alt="Frenetta Tate Global" style="height:56px;width:auto">
   </a>
   <ul class="nav-links">
     <li><a href="/" style="font-size:.72rem;font-weight:500;letter-spacing:.07em;text-transform:uppercase;text-decoration:none;color:var(--c80);transition:color .3s">Home</a></li>
@@ -99,180 +133,148 @@ body{padding-top:62px}
 
 <div class="page-content">
 
-  <div style="background:var(--charcoal);padding:7rem 4rem 5rem;border-bottom:3px solid var(--gold);text-align:center">
-    <div style="max-width:860px;margin:0 auto">
-      <span class="lbl">Commercial &amp; Government Services</span>
-      <h1 style="font-family:'Cormorant Garamond',serif;font-size:clamp(2.6rem,6vw,4.6rem);font-weight:500;color:var(--ivory);line-height:1.05;margin-bottom:1.5rem">Structured.<br><em style="color:var(--gold)">Documented. Delivered.</em></h1>
-      <p style="font-size:1.1rem;font-weight:300;color:rgba(245,242,237,.75);max-width:640px;margin:0 auto 2.5rem;line-height:1.85">Frenetta Tate Global LLC provides executive and administrative operations, process documentation, workplace and employee experience support, and project coordination for commercial and government organizations.</p>
-      <div style="display:flex;gap:1.25rem;justify-content:center;flex-wrap:wrap">
-        <a href="#registration" class="btn-p">View Registration Data</a>
-        <a href="/FTG_Government_Capability_Statement_2026.pdf" target="_blank" rel="noopener" class="btn-iv">View Capability Statement</a>
-      </div>
+  <!-- HERO -->
+  <div class="hero">
+    <div style="max-width:820px">
+      <span class="lbl">Executive &amp; Entrepreneur Support</span>
+      <h1 class="h-hero">More Capacity to Lead.<br><em>The Right Support to Keep<br>Things Moving.</em></h1>
+      <p class="body-lg light" style="margin-top:1.75rem;max-width:640px">There comes a point when doing everything yourself stops being resourceful and starts limiting your capacity. You lead the vision. I help create the structure that keeps it moving.</p>
     </div>
   </div>
 
-  <div class="section" id="registration" style="background:var(--charcoal)">
+  <!-- WHAT THIS IS -->
+  <div class="section ivory">
     <div class="section-inner">
-      <div style="text-align:center;margin-bottom:2.5rem">
-        <span class="lbl">Registration &amp; Identifiers</span>
-        <p style="font-size:.95rem;font-weight:300;color:rgba(245,242,237,.6)">Frenetta Tate Global LLC &nbsp;&middot;&nbsp; Houston, Texas</p>
-      </div>
-      <div class="grid-5"><div class="uei" style="padding:1.75rem 1.25rem;border:1px solid rgba(194,164,109,.25);text-align:center">
-      <p style="font-size:.68rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:.6rem;white-space:nowrap">UEI</p>
-      <p style="font-family:'Jost',sans-serif;font-size:1.35rem;font-weight:500;color:var(--ivory);letter-spacing:.04em;line-height:1.1;white-space:nowrap">NDTGZ6MPK1N6</p>
-    </div><div style="padding:1.75rem 1.25rem;border:1px solid rgba(194,164,109,.25);text-align:center">
-      <p style="font-size:.68rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:.6rem;white-space:nowrap">CAGE Code</p>
-      <p style="font-family:'Jost',sans-serif;font-size:1.35rem;font-weight:500;color:var(--ivory);letter-spacing:.04em;line-height:1.1;white-space:nowrap">9YC73</p>
-    </div><div style="padding:1.75rem 1.25rem;border:1px solid rgba(194,164,109,.25);text-align:center">
-      <p style="font-size:.68rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:.6rem;white-space:nowrap">NAICS</p>
-      <p style="font-family:'Jost',sans-serif;font-size:1.35rem;font-weight:500;color:var(--ivory);letter-spacing:.04em;line-height:1.1;white-space:nowrap">541611</p>
-    </div><div style="padding:1.75rem 1.25rem;border:1px solid rgba(194,164,109,.25);text-align:center">
-      <p style="font-size:.68rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:.6rem;white-space:nowrap">PSC</p>
-      <p style="font-family:'Jost',sans-serif;font-size:1.35rem;font-weight:500;color:var(--ivory);letter-spacing:.04em;line-height:1.1;white-space:nowrap">R707</p>
-    </div><div style="padding:1.75rem 1.25rem;border:1px solid rgba(194,164,109,.25);text-align:center">
-      <p style="font-size:.68rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:.6rem;white-space:nowrap">SAM.gov</p>
-      <p style="font-family:'Jost',sans-serif;font-size:1.35rem;font-weight:500;color:var(--ivory);letter-spacing:.04em;line-height:1.1;white-space:nowrap">Active</p>
-    </div></div>
-    </div>
-  </div>
-
-  <div class="section" style="background:var(--taupe)">
-    <div class="section-inner">
-      <div style="text-align:center;margin-bottom:2.5rem">
-        <span class="lbl">Business Designations</span>
-        <h2 class="h-section">A small business built for<br><em style="font-style:italic;color:var(--gold)">supplier diversity and set-aside work.</em></h2>
-      </div>
-      <div class="grid-3" style="max-width:900px;margin:0 auto"><div style="background:var(--ivory);border:1px solid var(--taupe);padding:1.75rem;text-align:center">
-      <p style="font-family:'Cormorant Garamond',serif;font-size:2.4rem;font-weight:600;color:var(--charcoal);line-height:1;margin-bottom:.5rem">WOSB</p>
-      <p style="font-size:.8rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--c80)">Woman-Owned Small Business</p>
-    </div><div style="background:var(--ivory);border:1px solid var(--taupe);padding:1.75rem;text-align:center">
-      <p style="font-family:'Cormorant Garamond',serif;font-size:2.4rem;font-weight:600;color:var(--charcoal);line-height:1;margin-bottom:.5rem">MBE</p>
-      <p style="font-size:.8rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--c80)">Minority Business Enterprise</p>
-    </div><div style="background:var(--ivory);border:1px solid var(--taupe);padding:1.75rem;text-align:center">
-      <p style="font-family:'Cormorant Garamond',serif;font-size:2.4rem;font-weight:600;color:var(--charcoal);line-height:1;margin-bottom:.5rem">SB</p>
-      <p style="font-size:.8rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--c80)">Small Business</p>
-    </div></div>
-    </div>
-  </div>
-
-  <div class="section" style="background:var(--ivory)">
-    <div class="section-inner">
-      <div style="text-align:center;margin-bottom:3rem">
-        <span class="lbl">Core Service Areas</span>
-        <h2 class="h-section">Four areas of <em style="font-style:italic;color:var(--gold)">support.</em></h2>
-      </div>
-      <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:1.5rem" class="two-col"><div style="background:var(--ivory);border-top:3px solid var(--gold);padding:2rem">
-      <p style="font-family:'Jost',sans-serif;font-size:1.7rem;font-weight:400;color:var(--gold);line-height:1;margin-bottom:.6rem">01</p>
-      <h3 style="font-family:'Cormorant Garamond',serif;font-size:1.45rem;font-weight:600;color:var(--charcoal);margin-bottom:.6rem;line-height:1.25">Executive &amp; Administrative Operations</h3>
-      <p style="font-size:.92rem;font-weight:300;color:var(--c80);line-height:1.75">Scheduling, meeting preparation, correspondence, travel coordination, action tracking, and administrative workflows.</p>
-    </div><div style="background:var(--ivory);border-top:3px solid var(--gold);padding:2rem">
-      <p style="font-family:'Jost',sans-serif;font-size:1.7rem;font-weight:400;color:var(--gold);line-height:1;margin-bottom:.6rem">02</p>
-      <h3 style="font-family:'Cormorant Garamond',serif;font-size:1.45rem;font-weight:600;color:var(--charcoal);margin-bottom:.6rem;line-height:1.25">Process Documentation &amp; Coordination</h3>
-      <p style="font-size:.92rem;font-weight:300;color:var(--c80);line-height:1.75">Standard operating procedures, process mapping, workflow documentation, handoffs, and process reviews.</p>
-    </div><div style="background:var(--ivory);border-top:3px solid var(--gold);padding:2rem">
-      <p style="font-family:'Jost',sans-serif;font-size:1.7rem;font-weight:400;color:var(--gold);line-height:1;margin-bottom:.6rem">03</p>
-      <h3 style="font-family:'Cormorant Garamond',serif;font-size:1.45rem;font-weight:600;color:var(--charcoal);margin-bottom:.6rem;line-height:1.25">Workplace &amp; Employee Experience Support</h3>
-      <p style="font-size:.92rem;font-weight:300;color:var(--c80);line-height:1.75">Workplace and vendor coordination, engagement and recognition initiatives, employee communications, and events.</p>
-    </div><div style="background:var(--ivory);border-top:3px solid var(--gold);padding:2rem">
-      <p style="font-family:'Jost',sans-serif;font-size:1.7rem;font-weight:400;color:var(--gold);line-height:1;margin-bottom:.6rem">04</p>
-      <h3 style="font-family:'Cormorant Garamond',serif;font-size:1.45rem;font-weight:600;color:var(--charcoal);margin-bottom:.6rem;line-height:1.25">Project &amp; Operational Support</h3>
-      <p style="font-size:.92rem;font-weight:300;color:var(--c80);line-height:1.75">Project schedules, milestone tracking, status reporting, stakeholder follow-up, and implementation coordination.</p>
-    </div></div>
-    </div>
-  </div>
-
-  <div class="section" style="background:var(--charcoal)">
-    <div class="section-inner">
-      <div style="text-align:center;margin-bottom:2.5rem">
-        <span class="lbl">How We Work</span>
-        <h2 class="h-section light">Three standards behind every engagement.</h2>
-      </div>
-      <div class="stack-m" style="display:grid;grid-template-columns:repeat(3,1fr);border:1px solid rgba(194,164,109,.25)"><div style="padding:2rem 1.5rem;text-align:center;border-right:1px solid rgba(194,164,109,.25);">
-      <p style="font-family:'Cormorant Garamond',serif;font-size:1.9rem;font-weight:600;font-style:italic;color:var(--gold);margin-bottom:.75rem">Structured.</p>
-      <p style="font-size:.9rem;font-weight:300;color:rgba(245,242,237,.75);line-height:1.75">Clear scope, defined roles, and a plan every stakeholder can follow before work begins.</p>
-    </div><div style="padding:2rem 1.5rem;text-align:center;border-right:1px solid rgba(194,164,109,.25);">
-      <p style="font-family:'Cormorant Garamond',serif;font-size:1.9rem;font-weight:600;font-style:italic;color:var(--gold);margin-bottom:.75rem">Documented.</p>
-      <p style="font-size:.9rem;font-weight:300;color:rgba(245,242,237,.75);line-height:1.75">A written record of decisions, deliverables, and handoffs, so results can be reviewed and verified.</p>
-    </div><div style="padding:2rem 1.5rem;text-align:center;">
-      <p style="font-family:'Cormorant Garamond',serif;font-size:1.9rem;font-weight:600;font-style:italic;color:var(--gold);margin-bottom:.75rem">Delivered.</p>
-      <p style="font-size:.9rem;font-weight:300;color:rgba(245,242,237,.75);line-height:1.75">Consistent follow-through on the commitments made, on the timeline agreed.</p>
-    </div></div>
-    </div>
-  </div>
-
-  <div class="section" style="background:var(--taupe)">
-    <div class="section-inner">
-      <div class="split">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start">
         <div>
-          <span class="lbl">About the Founder</span>
-          <h2 class="h-section" style="margin-bottom:1.25rem">Frenetta Tate, MBA</h2>
-          <p style="font-size:.72rem;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--c80);margin-bottom:1.25rem">Founder &amp; Principal Consultant</p>
-          <p class="body-lg">Frenetta Tate brings more than 20 years of enterprise operations and workplace experience leadership. She supports executives and teams through structured coordination, practical documentation, and reliable follow-through.</p>
+          <span class="lbl">The Support</span>
+          <h2 class="h-section" style="margin-bottom:1.25rem">Experienced executive and operational support — without a full-time hire.</h2>
+          <p class="body-lg" style="margin-bottom:1.25rem">Executive &amp; Entrepreneur Support provides experienced executive and operational support for entrepreneurs, founders, executives, and business owners who need help managing the moving pieces without necessarily adding a full-time employee.</p>
+          <p class="stmt" style="color:var(--gold)">You lead the vision. I help create the structure that keeps it moving.</p>
         </div>
-        <div style="background:var(--charcoal);padding:2rem;display:grid;gap:.75rem">
-          <p style="font-size:.72rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:.25rem">Core Expertise</p><div style="padding:1rem 1.5rem;border:1px solid rgba(194,164,109,.25);font-size:.9rem;font-weight:300;color:rgba(245,242,237,.85)">Executive and administrative coordination</div><div style="padding:1rem 1.5rem;border:1px solid rgba(194,164,109,.25);font-size:.9rem;font-weight:300;color:rgba(245,242,237,.85)">SOP and workflow documentation</div><div style="padding:1rem 1.5rem;border:1px solid rgba(194,164,109,.25);font-size:.9rem;font-weight:300;color:rgba(245,242,237,.85)">Workplace services and employee engagement</div><div style="padding:1rem 1.5rem;border:1px solid rgba(194,164,109,.25);font-size:.9rem;font-weight:300;color:rgba(245,242,237,.85)">Project tracking and stakeholder follow-up</div><div style="padding:1rem 1.5rem;border:1px solid rgba(194,164,109,.25);font-size:.9rem;font-weight:300;color:rgba(245,242,237,.85)">Operational communications and reporting</div>
+        <div style="background:var(--charcoal);padding:2.5rem">
+          <span class="lbl">What I Can Take Off Your Plate</span>
+          <ul class="service-list">
+            <li>Executive calendar and priority management</li>
+            <li>Inbox and communication management</li>
+            <li>Meeting preparation and follow-through</li>
+            <li>Project and initiative tracking</li>
+            <li>Vendor and stakeholder coordination</li>
+            <li>Documents, presentations, and executive briefings</li>
+            <li>Research and information organization</li>
+            <li>Workflow and process organization</li>
+            <li>Event and meeting logistics</li>
+            <li>Light business operations support</li>
+          </ul>
         </div>
       </div>
     </div>
   </div>
 
-  <div class="section" style="background:var(--ivory)">
+  <!-- PRICING -->
+  <div class="section taupe">
     <div class="section-inner">
       <div style="text-align:center;margin-bottom:2.5rem">
-        <span class="lbl">Past Performance</span>
-        <h2 class="h-section">Founder&rsquo;s relevant <em style="font-style:italic;color:var(--gold)">past performance.</em></h2>
+        <span class="lbl">Ways to Work Together</span>
+        <h2 class="h-section">Three engagements.<br><em style="font-style:italic;color:var(--gold)">One commitment to your capacity.</em></h2>
       </div>
-      <div style="display:grid;gap:1rem;max-width:900px;margin:0 auto"><div style="background:var(--ivory);padding:1.75rem;border-left:3px solid var(--gold)">
-        <h3 style="font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-weight:600;color:var(--charcoal);line-height:1.25;margin-bottom:.4rem">Employee Engagement &amp; Workplace Experience Improvement Initiative</h3>
-        <p style="font-size:.68rem;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-bottom:.6rem">2024&ndash;2026 &nbsp;|&nbsp; North America</p>
-        <p style="font-size:.9rem;font-weight:300;color:var(--c80);line-height:1.7">Increased employee engagement scores from 71% to 83% within six months across 100+ personnel.</p>
-      </div><div style="background:var(--ivory);padding:1.75rem;border-left:3px solid var(--gold)">
-        <h3 style="font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-weight:600;color:var(--charcoal);line-height:1.25;margin-bottom:.4rem">Employee Recognition &amp; Engagement Program Enhancement</h3>
-        <p style="font-size:.68rem;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-bottom:.6rem">2022&ndash;2024 &nbsp;|&nbsp; Regional</p>
-        <p style="font-size:.9rem;font-weight:300;color:var(--c80);line-height:1.7">Increased employee engagement scores from 70% to 75% through recognition and engagement programming.</p>
-      </div><div style="background:var(--ivory);padding:1.75rem;border-left:3px solid var(--gold)">
-        <h3 style="font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-weight:600;color:var(--charcoal);line-height:1.25;margin-bottom:.4rem">Financial Check Intake &amp; Distribution Workflow Development</h3>
-        <p style="font-size:.68rem;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-bottom:.6rem">Five-year period &nbsp;|&nbsp; Local / Regional</p>
-        <p style="font-size:.9rem;font-weight:300;color:var(--c80);line-height:1.7">Designed intake and tracking workflows supporting more than $21M in checks over five years.</p>
-      </div><div style="background:var(--ivory);padding:1.75rem;border-left:3px solid var(--gold)">
-        <h3 style="font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-weight:600;color:var(--charcoal);line-height:1.25;margin-bottom:.4rem">Conference Room Experience Enhancement Initiative</h3>
-        <p style="font-size:.68rem;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-bottom:.6rem">2024&ndash;2026 &nbsp;|&nbsp; Regional / North America</p>
-        <p style="font-size:.9rem;font-weight:300;color:var(--c80);line-height:1.7">Coordinated conference room refresh, hospitality, and vendor-supported workplace enhancements.</p>
-      </div><div style="background:var(--ivory);padding:1.75rem;border-left:3px solid var(--gold)">
-        <h3 style="font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-weight:600;color:var(--charcoal);line-height:1.25;margin-bottom:.4rem">Operational Communication &amp; Governance Coordination Support</h3>
-        <p style="font-size:.68rem;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-bottom:.6rem">Multi-year &nbsp;|&nbsp; North America</p>
-        <p style="font-size:.9rem;font-weight:300;color:var(--c80);line-height:1.7">Coordinated meetings, stakeholder communications, reporting, and cross-functional workflows.</p>
-      </div></div>
-      <p style="max-width:900px;margin:1.5rem auto 0;font-size:.82rem;font-style:italic;font-weight:300;color:var(--c80);line-height:1.6">Past performance reflects the founder&rsquo;s prior professional experience, not contracts awarded to Frenetta Tate Global LLC.</p>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem">
+
+        <div class="price-card">
+          <h3 style="font-family:'Cormorant Garamond',serif;font-size:1.35rem;font-weight:600;color:var(--charcoal);margin-bottom:.5rem">Executive Support Retainer</h3>
+          <div class="price">$1,250<span style="font-size:1rem;color:var(--c80)">/month</span></div>
+          <span class="hours">Up to 15 hours monthly</span>
+          <p style="font-size:.9rem;font-weight:300;color:var(--c80);line-height:1.7">Dedicated monthly support for leaders who need consistent executive support and reliable follow-through.</p>
+        </div>
+
+        <div class="price-card" style="border-top-color:var(--charcoal);background:var(--charcoal)">
+          <h3 style="font-family:'Cormorant Garamond',serif;font-size:1.35rem;font-weight:600;color:var(--gold);margin-bottom:.5rem">Executive Operations Retainer</h3>
+          <div class="price" style="color:var(--ivory)">$2,400<span style="font-size:1rem;color:rgba(245,242,237,.6)">/month</span></div>
+          <span class="hours" style="color:rgba(245,242,237,.5)">Up to 30 hours monthly</span>
+          <p style="font-size:.9rem;font-weight:300;color:rgba(245,242,237,.75);line-height:1.7">Deeper operational partnership across multiple priorities, projects, and moving pieces.</p>
+        </div>
+
+        <div class="price-card">
+          <h3 style="font-family:'Cormorant Garamond',serif;font-size:1.35rem;font-weight:600;color:var(--charcoal);margin-bottom:.5rem">Executive Support Intensive</h3>
+          <div class="price">$650</div>
+          <span class="hours">90-minute working session</span>
+          <p style="font-size:.9rem;font-weight:300;color:var(--c80);line-height:1.7">Identify what should come off your plate, where operational friction exists, and what support would create the greatest capacity. Includes a customized 30-day action plan.</p>
+        </div>
+
+      </div>
     </div>
   </div>
 
-  <div class="section" style="background:var(--olive);text-align:center">
-    <div class="narrow">
-      <span class="lbl">Let&rsquo;s Connect</span>
-      <h2 class="h-section light" style="margin-bottom:1rem">Looking for a qualified small business partner?</h2>
-      <p class="body-lg light" style="max-width:560px;margin:0 auto 2.5rem">View the capability statement, or reach out to discuss a requirement, a teaming opportunity, or a subcontracting need.</p>
-      <div style="display:flex;gap:1.25rem;justify-content:center;flex-wrap:wrap;margin-bottom:2.5rem">
-        <a href="/FTG_Government_Capability_Statement_2026.pdf" target="_blank" rel="noopener" class="btn-p">View Capability Statement</a>
+  <!-- HOW IT WORKS -->
+  <div class="section dark">
+    <div class="section-inner">
+      <div style="text-align:center;margin-bottom:2.5rem">
+        <span class="lbl">How It Works</span>
+        <h2 class="h-section light" style="margin-bottom:.75rem">A simple, structured onboarding.</h2>
+        <p class="body-lg light" style="max-width:540px;margin:0 auto">We begin with your priorities, establish clear boundaries and expectations, and build the right support around the way you work.</p>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:0;border:1px solid rgba(194,164,109,.2)">
+        <div style="padding:2rem 1.25rem;text-align:center;border-right:1px solid rgba(194,164,109,.2)">
+          <div style="font-family:'Cormorant Garamond',serif;font-size:3rem;font-weight:500;color:var(--gold);line-height:1;margin-bottom:.75rem">01</div>
+          <p style="font-size:.72rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-bottom:.75rem">Discover</p>
+          <p style="font-size:.82rem;font-weight:300;color:rgba(245,242,237,.65);line-height:1.65">We clarify your priorities and what needs the most support right now.</p>
+        </div>
+        <div style="padding:2rem 1.25rem;text-align:center;border-right:1px solid rgba(194,164,109,.2)">
+          <div style="font-family:'Cormorant Garamond',serif;font-size:3rem;font-weight:500;color:var(--gold);line-height:1;margin-bottom:.75rem">02</div>
+          <p style="font-size:.72rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-bottom:.75rem">Align</p>
+          <p style="font-size:.82rem;font-weight:300;color:rgba(245,242,237,.65);line-height:1.65">We establish expectations, boundaries, and how we will work together.</p>
+        </div>
+        <div style="padding:2rem 1.25rem;text-align:center;border-right:1px solid rgba(194,164,109,.2)">
+          <div style="font-family:'Cormorant Garamond',serif;font-size:3rem;font-weight:500;color:var(--gold);line-height:1;margin-bottom:.75rem">03</div>
+          <p style="font-size:.72rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-bottom:.75rem">Onboard</p>
+          <p style="font-size:.82rem;font-weight:300;color:rgba(245,242,237,.65);line-height:1.65">Access, tools, and workflows are set up for smooth day-to-day operation.</p>
+        </div>
+        <div style="padding:2rem 1.25rem;text-align:center;border-right:1px solid rgba(194,164,109,.2)">
+          <div style="font-family:'Cormorant Garamond',serif;font-size:3rem;font-weight:500;color:var(--gold);line-height:1;margin-bottom:.75rem">04</div>
+          <p style="font-size:.72rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-bottom:.75rem">Execute</p>
+          <p style="font-size:.82rem;font-weight:300;color:rgba(245,242,237,.65);line-height:1.65">Support begins. Things move. Your plate gets lighter.</p>
+        </div>
+        <div style="padding:2rem 1.25rem;text-align:center">
+          <div style="font-family:'Cormorant Garamond',serif;font-size:3rem;font-weight:500;color:var(--gold);line-height:1;margin-bottom:.75rem">05</div>
+          <p style="font-size:.72rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-bottom:.75rem">Refine</p>
+          <p style="font-size:.82rem;font-weight:300;color:rgba(245,242,237,.65);line-height:1.65">We review regularly and adjust to keep the support aligned with your needs.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CLOSER / CTA -->
+  <div class="section olive" style="text-align:center">
+    <div class="section-inner narrow">
+      <span class="lbl">The Right Support</span>
+      <h2 class="h-section light" style="margin-bottom:1rem">The right support doesn&rsquo;t just save time.</h2>
+      <p class="gold-italic" style="margin-bottom:2rem;font-size:1.4rem">It gives you back your capacity to lead.</p>
+      <p class="body-lg light" style="max-width:520px;margin:0 auto 2.5rem">Let&rsquo;s talk about what&rsquo;s on your plate.</p>
+      <div style="display:flex;gap:1.25rem;justify-content:center;flex-wrap:wrap;margin-bottom:3rem">
+        <a href="mailto:support@frenettatate.com" class="btn-p">Send a Message</a>
         <a href="tel:3462299157" class="btn-iv">346-229-9157</a>
       </div>
-      <div style="border-top:1px solid rgba(245,242,237,.15);padding-top:1.75rem">
-        <p style="font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(245,242,237,.5);margin-bottom:.5rem">Frenetta Tate Global LLC</p>
-        <p style="font-size:.85rem;font-weight:300;color:rgba(245,242,237,.7)">
-          <a href="tel:3462299157" style="color:inherit;text-decoration:none">346-229-9157</a> &nbsp;&middot;&nbsp;
-          <a href="mailto:frenetta@frenettatate.com" style="color:inherit;text-decoration:none">frenetta@frenettatate.com</a> &nbsp;&middot;&nbsp;
-          <a href="https://frenettatate.com" style="color:inherit;text-decoration:none">frenettatate.com</a>
+      <div style="border-top:1px solid rgba(245,242,237,.15);padding-top:2rem">
+        <p style="font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;color:rgba(245,242,237,.4);margin-bottom:.5rem">Frenetta Tate Global</p>
+        <p style="font-size:.85rem;font-weight:300;color:rgba(245,242,237,.6)">
+          <a href="tel:3462299157" style="color:rgba(245,242,237,.6);text-decoration:none">346-229-9157</a>
+          &nbsp;&middot;&nbsp;
+          <a href="mailto:support@frenettatate.com" style="color:rgba(245,242,237,.6);text-decoration:none">support@frenettatate.com</a>
+          &nbsp;&middot;&nbsp;
+          <a href="https://frenettatate.com" style="color:rgba(245,242,237,.6);text-decoration:none">frenettatate.com</a>
         </p>
-        <p style="margin-top:1rem;font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(245,242,237,.4)">UEI NDTGZ6MPK1N6 &nbsp;&middot;&nbsp; CAGE 9YC73 &nbsp;&middot;&nbsp; NAICS 541611 &nbsp;&middot;&nbsp; PSC R707</p>
       </div>
     </div>
   </div>
 
 </div>
 
+<!-- FOOTER -->
 <footer class="site-footer">
   <div class="footer-inner">
-    <a href="/" style="text-decoration:none"><img src="data:image/png;base64,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" alt="Frenetta Tate Global" style="height:44px;width:auto"></a>
+    <a href="/" style="text-decoration:none">
+      <img src="data:image/png;base64,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" alt="Frenetta Tate Global" style="height:44px;width:auto">
+    </a>
     <ul class="footer-links">
       <li><a href="/" style="font-size:.72rem;font-weight:500;letter-spacing:.07em;text-transform:uppercase;text-decoration:none;color:var(--c80);transition:color .3s">Home</a></li>
       <li><a href="/about/" style="font-size:.72rem;font-weight:500;letter-spacing:.07em;text-transform:uppercase;text-decoration:none;color:var(--c80);transition:color .3s">About</a></li>
