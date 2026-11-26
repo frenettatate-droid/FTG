@@ -47,21 +47,39 @@ body{font-family:'Jost',sans-serif;background:var(--ivory);color:var(--charcoal)
   .footer-links{flex-wrap:wrap;justify-content:center;gap:1rem}
 }
 
-/* Menu fits on smaller desktop screens */
-@media(max-width:1750px){.site-nav,.oci-nav,nav{padding-left:1.25rem!important;padding-right:1.25rem!important}.nav-links,.oci-nav-links{gap:.9rem!important;margin-left:1rem!important}.nav-links a,.oci-nav-links a{font-size:.66rem!important;letter-spacing:.04em!important;white-space:nowrap}.oci-nav-cta{padding:.4rem .9rem!important}}
-@media(max-width:1450px){.nav-links,.oci-nav-links{gap:.7rem!important;margin-left:.5rem!important}.nav-links a,.oci-nav-links a{font-size:.6rem!important;letter-spacing:.02em!important}.nav-links a[href="/#contact"],.nav-links a[onclick]{padding:.35rem .7rem!important}}
-@media(max-width:1250px){.site-nav,.oci-nav,nav{overflow-x:auto}}
+
+/* Dropdown menu */
+.has-sub{position:relative;padding:1.4rem 0;margin:-1.4rem 0}
+.has-sub>a::after{content:" \25BE";font-size:.75em}
+.nav-sub{display:none;position:absolute;top:100%;left:-1.25rem;background:#F5F2ED;border:1px solid #D9D4CC;border-top:2px solid #C2A46D;box-shadow:0 10px 28px rgba(0,0,0,.10);list-style:none;margin:0;padding:.5rem 0;min-width:310px;z-index:1200}
+.has-sub:hover .nav-sub,.has-sub:focus-within .nav-sub{display:block}
+.nav-sub li{display:block;margin:0;padding:0}
+.nav-sub a{display:block!important;padding:.7rem 1.4rem!important;white-space:nowrap}
+.nav-sub a:hover{color:#C2A46D!important}
+@media(max-width:1150px){.nav-links,.oci-nav-links{gap:1rem!important}.nav-links a,.oci-nav-links a{font-size:.64rem!important;letter-spacing:.04em!important;white-space:nowrap}}
+@media(max-width:820px){nav,.site-nav,.oci-nav{padding-left:.75rem!important;padding-right:.75rem!important}.nav-links,.oci-nav-links{gap:.55rem!important;margin-left:.5rem!important}.nav-links a,.oci-nav-links a{font-size:.52rem!important;letter-spacing:.02em!important}.nav-sub{display:none!important}.has-sub>a::after{content:""}nav img,.site-nav img,.oci-nav img{height:34px!important}}
 .footer-links,.oci-footer .oci-nav-links{flex-wrap:wrap;justify-content:center}
+
+/* Mobile menu: logo on top, links wrap below */
+@media(max-width:820px){
+nav,.site-nav,.oci-nav{flex-direction:column!important;align-items:center!important;gap:.4rem!important;padding-top:.5rem!important;padding-bottom:.55rem!important}
+.nav-links,.oci-nav-links{display:flex!important;flex-wrap:wrap!important;justify-content:center!important;gap:.35rem .9rem!important;margin:0!important;padding:0!important;list-style:none}
+.nav-links a,.oci-nav-links a{font-size:.6rem!important;letter-spacing:.05em!important}
+.nav-links a[href="/#contact"],.oci-nav-cta{padding:.3rem .8rem!important}
+.nav-ham{display:none!important}
+.nav-sub{display:none!important}.has-sub{padding:0;margin:0}.has-sub>a::after{content:""}
+body{padding-top:62px}
+}
 </style>
 <meta name="description" content="Free leadership tools from Frenetta Tate Global: The Work Redesign Review for AI and restructuring decisions, and the Leadership Blind Spot Assessment.">
-<link rel="canonical" href="https://frenettatate.com/free-tools/">
+<link rel="canonical" href="https://www.frenettatate.com/free-tools/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Frenetta Tate Global">
 <meta property="og:title" content="Free Tools for Leaders | Frenetta Tate Global">
 <meta property="og:description" content="Free leadership tools from Frenetta Tate Global: The Work Redesign Review for AI and restructuring decisions, and the Leadership Blind Spot Assessment.">
-<meta property="og:url" content="https://frenettatate.com/free-tools/">
+<meta property="og:url" content="https://www.frenettatate.com/free-tools/">
 <meta name="twitter:card" content="summary">
-<script type="application/ld+json">{"@type": "ProfessionalService", "@id": "https://frenettatate.com/#organization", "name": "Frenetta Tate Global LLC", "url": "https://frenettatate.com/", "telephone": "+1-346-229-9157", "email": "frenetta@frenettatate.com", "address": {"@type": "PostalAddress", "addressLocality": "Houston", "addressRegion": "TX", "addressCountry": "US"}, "founder": {"@type": "Person", "name": "Frenetta Tate", "jobTitle": "Founder & Principal Consultant"}, "@context": "https://schema.org", "description": "Free leadership tools from Frenetta Tate Global: The Work Redesign Review for AI and restructuring decisions, and the Leadership Blind Spot Assessment."}</script>
+<script type="application/ld+json">{"@type": "ProfessionalService", "@id": "https://www.frenettatate.com/#organization", "name": "Frenetta Tate Global LLC", "url": "https://www.frenettatate.com/", "telephone": "+1-346-229-9157", "email": "frenetta@frenettatate.com", "address": {"@type": "PostalAddress", "addressLocality": "Houston", "addressRegion": "TX", "addressCountry": "US"}, "founder": {"@type": "Person", "name": "Frenetta Tate", "jobTitle": "Founder & Principal Consultant"}, "@context": "https://schema.org", "description": "Free leadership tools from Frenetta Tate Global: The Work Redesign Review for AI and restructuring decisions, and the Leadership Blind Spot Assessment."}</script>
 </head>
 <body>
 
@@ -72,12 +90,7 @@ body{font-family:'Jost',sans-serif;background:var(--ivory);color:var(--charcoal)
   <ul class="nav-links">
     <li><a href="/" style="font-size:.72rem;font-weight:500;letter-spacing:.07em;text-transform:uppercase;text-decoration:none;color:var(--c80);transition:color .3s">Home</a></li>
     <li><a href="/about/" style="font-size:.72rem;font-weight:500;letter-spacing:.07em;text-transform:uppercase;text-decoration:none;color:var(--c80);transition:color .3s">About</a></li>
-    <li><a href="/the-work/" style="font-size:.72rem;font-weight:500;letter-spacing:.07em;text-transform:uppercase;text-decoration:none;color:var(--c80);transition:color .3s">The Work</a></li>
-    <li><a href="/oci/" style="font-size:.72rem;font-weight:500;letter-spacing:.07em;text-transform:uppercase;text-decoration:none;color:var(--c80);transition:color .3s">Operational Clarity Intensive</a></li>
-    <li><a href="/Leadership-audit/" style="font-size:.72rem;font-weight:500;letter-spacing:.07em;text-transform:uppercase;text-decoration:none;color:var(--c80);transition:color .3s">Leadership Audit</a></li>
-    <li><a href="/executive-support/" style="font-size:.72rem;font-weight:500;letter-spacing:.07em;text-transform:uppercase;text-decoration:none;color:var(--c80);transition:color .3s">Support</a></li>
-    <li><a href="/beyond-the-post/" style="font-size:.72rem;font-weight:500;letter-spacing:.07em;text-transform:uppercase;text-decoration:none;color:var(--c80);transition:color .3s">Beyond the Post</a></li>
-    <li><a href="/frenetta-tized/" style="font-size:.72rem;font-weight:500;letter-spacing:.07em;text-transform:uppercase;text-decoration:none;color:var(--c80);transition:color .3s">Get Frenetta-Tized!</a></li>
+    <li class="has-sub"><a href="/the-work/" style="font-size:.72rem;font-weight:500;letter-spacing:.07em;text-transform:uppercase;text-decoration:none;color:var(--c80);transition:color .3s">The Work</a><ul class="nav-sub"><li><a href="/oci/" style="font-size:.72rem;font-weight:500;letter-spacing:.07em;text-transform:uppercase;text-decoration:none;color:var(--c80);transition:color .3s">Operational Clarity Intensive</a></li><li><a href="/executive-support/" style="font-size:.72rem;font-weight:500;letter-spacing:.07em;text-transform:uppercase;text-decoration:none;color:var(--c80);transition:color .3s">Executive &amp; Entrepreneur Support</a></li><li><a href="/beyond-the-post/" style="font-size:.72rem;font-weight:500;letter-spacing:.07em;text-transform:uppercase;text-decoration:none;color:var(--c80);transition:color .3s">Beyond the Post</a></li><li><a href="/frenetta-tized/" style="font-size:.72rem;font-weight:500;letter-spacing:.07em;text-transform:uppercase;text-decoration:none;color:var(--c80);transition:color .3s">Get Frenetta-Tized!</a></li></ul></li>
     <li><a href="/government-contracting/" style="font-size:.72rem;font-weight:500;letter-spacing:.07em;text-transform:uppercase;text-decoration:none;color:var(--c80);transition:color .3s">Government Contracting</a></li>
     <li><a href="/free-tools/" style="font-size:.72rem;font-weight:500;letter-spacing:.07em;text-transform:uppercase;text-decoration:none;color:var(--c80);transition:color .3s">Free Tools</a></li>
     <li><a href="/#contact" style="font-size:.72rem;font-weight:500;letter-spacing:.07em;text-transform:uppercase;text-decoration:none;color:var(--charcoal);border:1px solid var(--charcoal);padding:.4rem 1.25rem;display:inline-block;transition:all .3s">Work With Frenetta</a></li>
@@ -164,8 +177,7 @@ body{font-family:'Jost',sans-serif;background:var(--ivory);color:var(--charcoal)
       <li><a href="/about/" style="font-size:.72rem;font-weight:500;letter-spacing:.07em;text-transform:uppercase;text-decoration:none;color:var(--c80);transition:color .3s">About</a></li>
       <li><a href="/the-work/" style="font-size:.72rem;font-weight:500;letter-spacing:.07em;text-transform:uppercase;text-decoration:none;color:var(--c80);transition:color .3s">The Work</a></li>
       <li><a href="/oci/" style="font-size:.72rem;font-weight:500;letter-spacing:.07em;text-transform:uppercase;text-decoration:none;color:var(--c80);transition:color .3s">Operational Clarity Intensive</a></li>
-      <li><a href="/Leadership-audit/" style="font-size:.72rem;font-weight:500;letter-spacing:.07em;text-transform:uppercase;text-decoration:none;color:var(--c80);transition:color .3s">Leadership Audit</a></li>
-      <li><a href="/executive-support/" style="font-size:.72rem;font-weight:500;letter-spacing:.07em;text-transform:uppercase;text-decoration:none;color:var(--c80);transition:color .3s">Support</a></li>
+      <li><a href="/executive-support/" style="font-size:.72rem;font-weight:500;letter-spacing:.07em;text-transform:uppercase;text-decoration:none;color:var(--c80);transition:color .3s">Executive &amp; Entrepreneur Support</a></li>
       <li><a href="/beyond-the-post/" style="font-size:.72rem;font-weight:500;letter-spacing:.07em;text-transform:uppercase;text-decoration:none;color:var(--c80);transition:color .3s">Beyond the Post</a></li>
       <li><a href="/frenetta-tized/" style="font-size:.72rem;font-weight:500;letter-spacing:.07em;text-transform:uppercase;text-decoration:none;color:var(--c80);transition:color .3s">Get Frenetta-Tized!</a></li>
       <li><a href="/government-contracting/" style="font-size:.72rem;font-weight:500;letter-spacing:.07em;text-transform:uppercase;text-decoration:none;color:var(--c80);transition:color .3s">Government Contracting</a></li>
